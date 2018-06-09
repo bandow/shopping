@@ -1,0 +1,535 @@
+@charset "UTF-8";
+/*
+   公用变量
+*/
+/* color
+-------------------------- */
+/* Border
+-------------------------- */
+/* Box-shadow
+-------------------------- */
+/* Fill
+-------------------------- */
+/* Font
+-------------------------- */
+/* Disable base
+-------------------------- */
+/* Transition
+-------------------------- */
+/*
+   公用变量
+*/
+/* color
+-------------------------- */
+/* Border
+-------------------------- */
+/* Box-shadow
+-------------------------- */
+/* Fill
+-------------------------- */
+/* Font
+-------------------------- */
+/* Disable base
+-------------------------- */
+/* Transition
+-------------------------- */
+/*
+   公用变量
+*/
+/* color
+-------------------------- */
+/* Border
+-------------------------- */
+/* Box-shadow
+-------------------------- */
+/* Fill
+-------------------------- */
+/* Font
+-------------------------- */
+/* Disable base
+-------------------------- */
+/* Transition
+-------------------------- */
+/*
+   公用变量
+*/
+/* color
+-------------------------- */
+/* Border
+-------------------------- */
+/* Box-shadow
+-------------------------- */
+/* Fill
+-------------------------- */
+/* Font
+-------------------------- */
+/* Disable base
+-------------------------- */
+/* Transition
+-------------------------- */
+html {
+  /*-webkit-text-size-adjust是解决 iPhone 横屏时默认会放大文字的问题*/
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  /*取消掉300ms的延迟，chrome和safari可以生效*/
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
+}
+
+html, body {
+  font-family: "Microsoft Yahei", Tahoma, Simsun, sans-serif, -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti;
+  /*-webkit-user-select:none禁止用户进行复制.选择.*/
+  width: 100%;
+  /*使用min-height:100%代替height：100%*/
+  height: 100%;
+  min-height: 100%;
+  color: #333333;
+  font-size: 12px;
+}
+
+body {
+  /*弹性滚动-局部滚动开启弹性滚动：将属性挂在body上，可以避免很多奇怪的bug。*/
+  overflow: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, div, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+  /*把所有元素的内边距和边框不再会增加它的宽度*/
+  /* Firefox */
+  -webkit-box-sizing: border-box;
+  /* Safari */
+  box-sizing: border-box;
+}
+
+ol, ul {
+  /*去掉列表点*/
+  list-style: none;
+}
+
+table {
+  /*去掉表格的双行线*/
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*取消a标签在移动端点击时的背景颜色*/
+a, a:hover, a:active, a:visited, a:link, a:focus {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+  background: none;
+  text-decoration: none;
+}
+
+a, img {
+  /* 禁止长按链接与图片弹出菜单 */
+  -webkit-touch-callout: none;
+}
+
+input {
+  /*ios去除input默认样式*/
+  -webkit-appearance: none;
+}
+
+.clearfix {
+  zoom: 1;
+}
+
+.clearfix:before, .clearfix:after {
+  content: '';
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.max-width {
+  max-width: 7.5rem;
+}
+
+.wrapper {
+  position: relative;
+  width: 100%;
+  min-height: 100%;
+  height: auto;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.w1190 {
+  margin: 0 auto;
+  width: 1190px;
+}
+
+body {
+  background-color: #f5f5f5;
+}
+
+.header {
+  width: 100%;
+  height: auto;
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+}
+
+.header .header-content {
+  padding: 28px 0;
+  height: 100px;
+}
+
+.header .header-content > div {
+  float: left;
+}
+
+.header .header-content .logo {
+  margin-left: 18px;
+}
+
+.header .header-content .search {
+  margin-left: 30px;
+}
+
+.header .header-content .search label {
+  float: left;
+  padding: 0 5px;
+  width: 536px;
+  height: 40px;
+  border: 1px solid #ccc;
+  border-right: 0;
+}
+
+.header .header-content .search label input {
+  background: none;
+  border: none;
+  outline: none;
+  width: 100%;
+  height: 100%;
+  font: 14px/40px "Microsoft Yahei", Tahoma, Simsun, sans-serif, -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti;
+  color: #333;
+}
+
+.header .header-content .search label input::-moz-input-placeholder {
+  color: #ccc;
+}
+
+.header .header-content .search label input::-webkit-input-placeholder {
+  color: #ccc;
+}
+
+.header .header-content .search label input::-ms-input-placeholder {
+  color: #ccc;
+}
+
+.header .header-content .search .search-btn {
+  float: left;
+  width: 36px;
+  height: 40px;
+  background: url(../../images/icon1.png) #c01132 center center no-repeat;
+  cursor: pointer;
+}
+
+.header .header-content .items {
+  width: 188px;
+  height: 40px;
+}
+
+.header .header-content .items > a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding-right: 10px;
+  font: 14px/40px "Microsoft Yahei", Tahoma, Simsun, sans-serif, -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti;
+  text-align: right;
+  border: 1px solid #ccc;
+}
+
+.header .header-content .shopping-carts {
+  position: relative;
+  margin-left: 18px;
+}
+
+.header .header-content .shopping-carts > a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 40px;
+  color: #c01132;
+  background: url(../../images/icon2.png) #fff 10px 8px no-repeat;
+  z-index: 1;
+  display: block;
+}
+
+.header .header-content .shopping-carts > a:hover {
+  padding-bottom: 50px;
+  border-bottom: 0;
+}
+
+.header .header-content .shopping-carts .cart {
+  position: absolute;
+  left: 0;
+  top: 50px;
+  display: none;
+  padding: 10px 5px 10px 10px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+}
+
+.header .header-content .shopping-carts .cart .cart-content-items {
+  padding-right: 10px;
+  width: 378px;
+  max-height: 386px;
+  min-height: 89px;
+  overflow-x: auto;
+}
+
+.header .header-content .shopping-carts .cart .cart-content-items .cart-items {
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  width: 364px;
+  border-bottom: 1px solid #ccc;
+  overflow: hidden;
+}
+
+.header .header-content .shopping-carts .cart .cart-content-items .cart-items > div {
+  float: left;
+}
+
+.header .header-content .shopping-carts .cart .cart-content-items .cart-items .img {
+  width: 78px;
+  height: 78px;
+  font-size: 0;
+}
+
+.header .header-content .shopping-carts .cart .cart-content-items .cart-items .img > img {
+  width: 100%;
+}
+
+.header .header-content .shopping-carts .cart .cart-content-items .cart-items .text {
+  margin-left: 10px;
+}
+
+.header .header-content .shopping-carts .cart .cart-content-items .cart-items .text p {
+  font: 14px/1.5 "Microsoft Yahei", Tahoma, Simsun, sans-serif, -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti;
+  color: #666;
+}
+
+.header .header-content .shopping-carts .cart .cart-content-items .cart-items .text h6 {
+  margin-top: 14px;
+  font: 14px/1.5 "Microsoft Yahei", Tahoma, Simsun, sans-serif, -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti;
+  color: #666;
+}
+
+.header .header-content .shopping-carts .cart .cart-content-items .cart-items > a {
+  float: right;
+  font: 14px/1.5 "Microsoft Yahei", Tahoma, Simsun, sans-serif, -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti;
+  color: #666;
+}
+
+.header .header-content .shopping-carts .cart .cart-content-items .cart-items > a:hover {
+  color: #c01132;
+  text-decoration: underline;
+}
+
+.header .header-content .shopping-carts .cart .cart-content-bottom {
+  padding-top: 10px;
+  overflow: hidden;
+}
+
+.header .header-content .shopping-carts .cart .cart-content-bottom p {
+  float: left;
+  font: 14px/40px "Microsoft Yahei", Tahoma, Simsun, sans-serif, -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti;
+}
+
+.header .header-content .shopping-carts .cart .cart-content-bottom p span {
+  margin-left: 10px;
+}
+
+.header .header-content .shopping-carts .cart .cart-content-bottom p em {
+  color: #c01132;
+}
+
+.header .header-content .shopping-carts .cart .cart-content-bottom a {
+  float: right;
+  width: 80px;
+  height: 34px;
+  font: 14px/34px "Microsoft Yahei", Tahoma, Simsun, sans-serif, -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti;
+  color: #fff;
+  background: #c01132;
+  text-align: center;
+  background: -webkit-gradient(linear, left top, left bottom, from(#e60133), to(#c01132));
+  background: -webkit-linear-gradient(#e60133, #c01132);
+  background: -o-linear-gradient(#e60133, #c01132);
+  background: linear-gradient(#e60133, #c01132);
+}
+
+.header .header-content .shopping-carts .line {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  z-index: 2;
+  width: 188px;
+  height: 2px;
+  background-color: #c01132;
+}
+
+.header .header-content .shopping-carts.on > a {
+  padding-bottom: 50px;
+  border-bottom: 0;
+}
+
+.header .header-content .login {
+  position: relative;
+  float: right;
+}
+
+.header .header-content .login > a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 40px;
+  color: #333;
+  background: url(../../images/icon3.png) #fff 10px center no-repeat;
+  z-index: 1;
+  display: block;
+}
+
+.header .header-content .login .login-list {
+  position: absolute;
+  left: 0;
+  top: 40px;
+  display: none;
+  width: 188px;
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-top: 0;
+}
+
+.header .header-content .login .login-list > a {
+  display: block;
+  font: 14px/2 "Microsoft Yahei", Tahoma, Simsun, sans-serif, -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti;
+  color: #666;
+}
+
+.header .header-content .login .login-list > a em {
+  color: #c01132;
+}
+
+.header .header-content .login.on > a {
+  border-bottom: 2px solid #c01132;
+}
+
+.container {
+  height: auto;
+  overflow: hidden;
+}
+
+.footer {
+  padding: 20px 0;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  background-color: #e3e4e5;
+}
+
+.footer .footer-content .footer-content-l {
+  float: left;
+  width: 1000px;
+}
+
+.footer .footer-content .footer-content-l .title {
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  height: auto;
+  overflow: hidden;
+  border-bottom: 1px solid #ccc;
+}
+
+.footer .footer-content .footer-content-l .title ul {
+  float: left;
+}
+
+.footer .footer-content .footer-content-l .title ul li {
+  margin-right: 80px;
+  display: inline-block;
+  font: 18px/1.5 "Microsoft Yahei", Tahoma, Simsun, sans-serif, -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti;
+  color: #333;
+}
+
+.footer .footer-content .footer-content-l .title ul li i {
+  margin-right: 10px;
+  font-size: 0;
+}
+
+.footer .footer-content .footer-content-l .title .settings {
+  margin-right: 20px;
+  margin-top: 26px;
+  float: right;
+}
+
+.footer .footer-content .footer-content-l .title .settings a {
+  padding-right: 20px;
+  background: url(../../images/icon12.png) right center no-repeat;
+  display: block;
+  font: 12px/15px "Microsoft Yahei", Tahoma, Simsun, sans-serif, -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti;
+  color: #333;
+}
+
+.footer .footer-content .footer-content-l .list dl {
+  margin: 0 80px 0 50px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.footer .footer-content .footer-content-l .list dl:first-child + dl {
+  margin-left: 55px;
+}
+
+.footer .footer-content .footer-content-l .list dl:first-child + dl + dl {
+  margin-left: 14px;
+}
+
+.footer .footer-content .footer-content-l .list dl:first-child + dl + dl + dl {
+  margin-left: 48px;
+}
+
+.footer .footer-content .footer-content-l .list dl dd a {
+  font: 14px/2 "Microsoft Yahei", Tahoma, Simsun, sans-serif, -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti;
+  color: #333;
+}
+
+.footer .footer-content .footer-content-l .list dl dd a:hover {
+  color: #c01132;
+  text-decoration: underline;
+}
+
+.footer .footer-content .footer-content-l > p {
+  margin-top: 20px;
+  font: 12px/1 "Microsoft Yahei", Tahoma, Simsun, sans-serif, -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti;
+  color: #333;
+}
+
+.footer .footer-content .footer-content-r {
+  margin-top: 10px;
+  width: 110px;
+  float: right;
+}

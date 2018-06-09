@@ -16,261 +16,146 @@
 -------------------------- */
 /* Transition
 -------------------------- */
-/*
-   公用变量
-*/
-/* color
--------------------------- */
-/* Border
--------------------------- */
-/* Box-shadow
--------------------------- */
-/* Fill
--------------------------- */
-/* Font
--------------------------- */
-/* Disable base
--------------------------- */
-/* Transition
--------------------------- */
-/*
-   公用变量
-*/
-/* color
--------------------------- */
-/* Border
--------------------------- */
-/* Box-shadow
--------------------------- */
-/* Fill
--------------------------- */
-/* Font
--------------------------- */
-/* Disable base
--------------------------- */
-/* Transition
--------------------------- */
-/*
-   公用变量
-*/
-/* color
--------------------------- */
-/* Border
--------------------------- */
-/* Box-shadow
--------------------------- */
-/* Fill
--------------------------- */
-/* Font
--------------------------- */
-/* Disable base
--------------------------- */
-/* Transition
--------------------------- */
-html {
-  /*-webkit-text-size-adjust是解决 iPhone 横屏时默认会放大文字的问题*/
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  /*取消掉300ms的延迟，chrome和safari可以生效*/
-  -ms-touch-action: manipulation;
-      touch-action: manipulation;
-}
-
-html, body {
-  font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti, "Microsoft Yahei", Tahoma, Simsun, sans-serif;
-  /*-webkit-user-select:none禁止用户进行复制.选择.*/
-  width: 100%;
-  /*使用min-height:100%代替height：100%*/
-  height: 100%;
-  min-height: 100%;
-  color: #333333;
-  font-size: 0.24rem;
-}
-
-body {
-  /*弹性滚动-局部滚动开启弹性滚动：将属性挂在body上，可以避免很多奇怪的bug。*/
-  overflow: scroll;
-  -webkit-overflow-scrolling: touch;
-}
-
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, div, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font: inherit;
-  font-size: 100%;
-  vertical-align: baseline;
-  /*把所有元素的内边距和边框不再会增加它的宽度*/
-  /* Firefox */
-  -webkit-box-sizing: border-box;
-  /* Safari */
-  box-sizing: border-box;
-}
-
-ol, ul {
-  /*去掉列表点*/
-  list-style: none;
-}
-
-table {
-  /*去掉表格的双行线*/
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-/*取消a标签在移动端点击时的背景颜色*/
-a, a:hover, a:active, a:visited, a:link, a:focus {
-  -webkit-tap-highlight-color: transparent;
-  -webkit-tap-highlight-color: transparent;
-  outline: none;
-  background: none;
-  text-decoration: none;
-}
-
-a, img {
-  /* 禁止长按链接与图片弹出菜单 */
-  -webkit-touch-callout: none;
-}
-
-input {
-  /*ios去除input默认样式*/
-  -webkit-appearance: none;
-}
-
-.clearfix {
-  zoom: 1;
-}
-
-.clearfix:before, .clearfix:after {
-  content: '';
-  display: table;
-}
-
-.clearfix:after {
-  clear: both;
-}
-
-.max-width {
-  max-width: 7.5rem;
-}
-
-.wrapper {
-  position: relative;
-  width: 100%;
-  min-height: 100%;
-  height: auto;
-  margin: 0 auto;
+.news {
+  margin: 10px 0 0 0;
   overflow: hidden;
 }
 
-.w1190 {
-  margin: 0 auto;
-  width: 1190px;
-}
-
-body {
-  background-color: #f5f5f5;
-}
-
-.header {
-  width: 100%;
-  height: auto;
+.news .news-l {
+  padding: 20px 0;
+  float: left;
+  width: 986px;
+  height: 164px;
   background-color: #fff;
+  overflow: hidden;
 }
 
-.header .header-content {
-  padding: 28px 0;
-  font-size: 0;
+.news .news-l .items {
+  padding: 0 20px;
+  float: left;
+  width: 328px;
+  border-right: 1px solid #ccc;
 }
 
-.header .header-content > div {
-  display: inline-block;
-  vertical-align: top;
-}
-
-.header .header-content .logo {
-  margin-left: 18px;
-}
-
-.header .header-content .search {
-  margin-left: 30px;
-}
-
-.header .header-content .search label {
-  display: inline-block;
-  vertical-align: top;
-  padding: 0 5px;
-  width: 536px;
-  height: 40px;
-  border: 1px solid #ccc;
-  border-right: 0;
-}
-
-.header .header-content .search label input {
-  background: none;
-  border: none;
-  outline: none;
-  width: 100%;
-  height: 100%;
-  font: 14px/1.5 -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti, "Microsoft Yahei", Tahoma, Simsun, sans-serif;
+.news .news-l .items h3 {
+  padding-left: 25px;
+  margin-bottom: 10px;
+  font: bold 16px/1.5 "Microsoft Yahei", Tahoma, Simsun, sans-serif, -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti;
   color: #333;
 }
 
-.header .header-content .search label input::-webkit-input-placeholder {
-  color: #ccc;
+.news .news-l .items ul {
+  padding-left: 25px;
 }
 
-.header .header-content .search .search-btn {
-  display: inline-block;
-  vertical-align: top;
-  width: 36px;
-  height: 40px;
-  background: url(../../images/icon1.png) #c01132 center center no-repeat;
-  cursor: pointer;
-}
-
-.header .header-content .items {
-  margin-left: 18px;
-  width: 188px;
-  height: 40px;
-  border: 1px solid #ccc;
-}
-
-.header .header-content .items a {
-  width: 100%;
-  height: 100%;
-}
-
-.header .header-content .items a p {
-  padding-right: 10px;
-  font: 14px/40px -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti, "Microsoft Yahei", Tahoma, Simsun, sans-serif;
-  text-align: right;
-}
-
-.header .header-content .shopping-carts {
-  background: url(../../images/icon2.png) 10px center no-repeat;
-}
-
-.header .header-content .shopping-carts a > p {
-  color: #c01132;
-}
-
-.header .header-content .login {
-  background: url(../../images/icon3.png) 10px center no-repeat;
-}
-
-.header .header-content .login a > p {
+.news .news-l .items ul li a {
+  display: block;
+  width: 262px;
+  font: 14px/2 "Microsoft Yahei", Tahoma, Simsun, sans-serif, -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti;
   color: #666;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
+  word-break: break-all;
+  white-space: nowrap;
+}
+
+.news .news-l .items ul li a:hover {
+  color: #c01132;
+  text-decoration: underline;
+}
+
+.news .news-l .items:first-child h3 {
+  background: url(../../images/icon4.png) left center no-repeat;
+}
+
+.news .news-l .items:first-child + div h3 {
+  background: url(../../images/icon5.png) left center no-repeat;
+}
+
+.news .news-l .items:first-child + div + div {
+  border-right: 0;
+}
+
+.news .news-l .items:first-child + div + div h3 {
+  background: url(../../images/icon6.png) left center no-repeat;
+}
+
+.news .news-r {
+  float: right;
+  width: 189px;
+  height: 164px;
+  font-size: 0;
+}
+
+.hot-product {
+  margin: 10px 0 30px;
+  background-color: #fff;
+}
+
+.hot-product .title {
+  padding: 10px 20px;
+  height: auto;
+  overflow: hidden;
+}
+
+.hot-product .title h3 {
+  padding-left: 36px;
+  float: left;
+  background: url(../../images/icon7.png) left center no-repeat;
+  font: bold 18px/23px "Microsoft Yahei", Tahoma, Simsun, sans-serif, -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti;
+  color: #333;
+}
+
+.hot-product .title a {
+  float: right;
+  font: 14px/23px "Microsoft Yahei", Tahoma, Simsun, sans-serif, -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti;
+  color: #333;
+}
+
+.hot-product .title a:hover {
+  color: #c01132;
+  text-decoration: underline;
+}
+
+.hot-product .product-list {
+  padding: 20px;
+  padding-top: 0;
+  overflow: hidden;
+}
+
+.hot-product .product-list .items {
+  float: left;
+  margin-left: 12px;
+}
+
+.hot-product .product-list .items:first-child {
+  margin-left: 0;
+}
+
+.hot-product .product-list .items .img {
+  font-size: 0;
+  witdh: 220px;
+  heihgt: 220px;
+}
+
+.hot-product .product-list .items .img img {
+  width: 100%;
+}
+
+.hot-product .product-list .items h4 {
+  font: 18px/2 "Microsoft Yahei", Tahoma, Simsun, sans-serif, -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti;
+  color: #333;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
+  word-break: break-all;
+  white-space: nowrap;
+  width: 220px;
+}
+
+.hot-product .product-list .items h5 {
+  margin-top: 5px;
+  font: 18px/2 "Microsoft Yahei", Tahoma, Simsun, sans-serif, -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti;
+  color: #c01132;
 }
