@@ -86,11 +86,119 @@
 				</div>
 			</div>
 		</div>
-		<div class="container w1190">
+		<div class="container container-list w1190">
 			<div class="list-l">
-				
+				<div class="title-list">
+					<h3>商品分类</h3>
+					<div class="title-list-content">
+						<dl>
+							<dt>运营耗品 ></dt>
+							<dd>
+								<a href="">印刷品</a>
+								<a href="">易耗品</a>
+								<a href="">小商品</a>
+								<a href="">会员</a>
+							</dd>
+						</dl>
+						<dl>
+							<dt>布草及工服 ></dt>
+							<dd>
+								<a href="">布草</a>
+								<a href="">工服</a>
+							</dd>	      
+						</dl>
+						<dl>
+							<dt>基础建材 ></dt>
+							<dd>
+								<a href="">涂料墙纸 </a>
+								<a href="">龙头花洒 </a>
+								<a href="">开关插</a>
+							</dd>
+						</dl>
+						<dl>
+							<dt>门锁 ></dt>
+							<dd><a href="">门锁</a></dd>
+						</dl>
+						<dl>
+							<dt>软装装饰 ></dt>
+							<dd>
+								<a href="">广告标识</a> 
+								<a href="">床垫</a>
+								<a href="">窗帘</a>
+								<a href="">家具</a>
+							</dd>
+						</dl>
+						<dl>
+							<dt>IT/电器/设备 ></dt>
+							<dd>
+								<a href="">网络设备</a>
+								<a href="">电器</a>
+								<a href="">空调</a>
+							</dd>
+						</dl>
+					</div>
+				</div>
+				<div class="list-l-product">
+					<h3>广告商品</h3>
+					<div class="product-items-content">
+						<a href="" class="product-items">
+							<div class="img"><img src="../images/product1.jpg" alt=""></div>
+							<h5>精选便捷3.0-</h5>
+							<p>东升-走廊地毯</p>
+							<h6>¥ 848.00</h6>
+						</a>
+						<a href="" class="product-items">
+							<div class="img"><img src="../images/product2.jpg" alt=""></div>
+							<h5>精选便捷3.0-</h5>
+							<p>东升-走廊地毯走廊地毯走廊地毯走廊地毯走廊地毯</p>
+							<h6>¥ 848.00</h6>
+						</a>
+						<a href="" class="product-items">
+							<div class="img"><img src="../images/product3.jpg" alt=""></div>
+							<h5>精选便捷3.0-</h5>
+							<p>东升-走廊地毯</p>
+							<h6>¥ 848.00</h6>
+						</a>
+					</div>	
+				</div>
+				<div class="list-l-product-foot">
+					<a href=""><img src="../images/index.jpg" alt=""></a>
+				</div>
 			</div>
-			<div class="list-r"></div>
+			<div class="list-r">
+				<div class="list-r-tilte">
+					<div class="list-r-tilte-l">
+						<h4>运营耗品  > </h4>
+						<ul>
+							<li><a href="javascript:;">印刷品</a></li>
+							<li>
+								<a href="javascript:;">易耗品</a>
+								<div class="text-list" style="display:none;">
+									<ul>
+										<li>洗漱用品</li>
+										<li>纸杯</li>
+										<li>拖鞋</li>
+										<li>纸巾</li>
+										<li>其他</li>
+									</ul>
+								</div>
+							</li>
+							<li><a href="javascript:;">赠饮</a></li>
+							<li><a href="javascript:;">小商品</a></li>
+							<li><a href="javascript:;">配备物品</a></li>
+							<li><a href="javascript:;">香薰</a></li>
+							<li><a href="javascript:;">会员卡</a></li>
+							<li><a href="javascript:;">餐厅及厨房用品</a></li>
+							<li><a href="javascript:;">健身器材</a></li>
+							<li><a href="javascript:;">健身器材</a></li>
+						</ul>
+					</div>
+					<div class="list-r-tilte-r">
+						<a href="">订单模版</a>
+						<a href="">操作指南</a>
+					</div>
+				</div>
+			</div>
 		</div>
 		<div class="footer">
 			<div class="w1190 footer-content">
@@ -139,13 +247,12 @@
 			//滚动条
 			$("#boxscroll").niceScroll({cursorborder:"",cursorcolor:"#ddd"});
 			//购物车移入移出
-			$(".shopping-carts,.login").bind("mouseenter",function(){
-				$(this).addClass("on");
+			$(".shopping-carts,.login").hover(function(){
+			    $(this).addClass("on");
 				$(this).append('<div class="line"></div>');
 				$(this).find("a").next().show();
-			});
-			$(".shopping-carts,.login").bind("mouseleave",function(){
-				$(this).removeClass("on");
+			},function(){
+			    $(this).removeClass("on");
 				$(".line").remove();
 				$(this).find("a").next().hide();
 			});
@@ -153,6 +260,14 @@
 			$(".cart .del").bind("click",function(){
 				$(this).parent().remove();
 			})
+
+			//list 商品分类
+			$(".list-l .title-list").hover(function(){
+			    $(this).find(".title-list-content").show();
+			},function(){
+			    $(this).find(".title-list-content").hide();
+			});
+
 		});
 	</script>
 	<!-- 以下是针对ie9以下才执行的js代码 注意不要删掉哦！！！ -->

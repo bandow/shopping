@@ -202,13 +202,12 @@
 			//滚动条
 			$("#boxscroll").niceScroll({cursorborder:"",cursorcolor:"#ddd"});
 			//购物车移入移出
-			$(".shopping-carts,.login").bind("mouseenter",function(){
-				$(this).addClass("on");
+			$(".shopping-carts,.login").hover(function(){
+			    $(this).addClass("on");
 				$(this).append('<div class="line"></div>');
 				$(this).find("a").next().show();
-			});
-			$(".shopping-carts,.login").bind("mouseleave",function(){
-				$(this).removeClass("on");
+			},function(){
+			    $(this).removeClass("on");
 				$(".line").remove();
 				$(this).find("a").next().hide();
 			});

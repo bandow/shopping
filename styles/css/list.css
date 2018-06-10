@@ -1,0 +1,219 @@
+@charset "UTF-8";
+/*
+   公用变量
+*/
+/* color
+-------------------------- */
+/* Border
+-------------------------- */
+/* Box-shadow
+-------------------------- */
+/* Fill
+-------------------------- */
+/* Font
+-------------------------- */
+/* Disable base
+-------------------------- */
+/* Transition
+-------------------------- */
+.container-list {
+  margin-bottom: 20px;
+  /*overflow:unset;*/
+}
+
+.list-l {
+  float: left;
+  width: 190px;
+}
+
+.list-l .title-list {
+  position: relative;
+  width: 190px;
+  height: 40px;
+}
+
+.list-l .title-list h3 {
+  position: relative;
+  padding: 0 20px;
+  font: bold 18px/40px "Microsoft Yahei", Tahoma, Simsun, sans-serif, -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti;
+  color: #fff;
+  background-color: #818181;
+  cursor: pointer;
+}
+
+.list-l .title-list h3:before {
+  position: absolute;
+  right: 20px;
+  top: 18px;
+  content: '';
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 5px;
+  border-color: #bf1132 transparent transparent transparent;
+}
+
+.list-l .title-list .title-list-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  display: none;
+  padding: 10px;
+  width: 190px;
+  background: #000;
+  background: rgba(0, 0, 0, 0.8);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#c8000000,endColorstr=#c8000000);
+}
+
+.list-l .title-list .title-list-content dl {
+  display: block;
+}
+
+.list-l .title-list .title-list-content dl dt {
+  display: block;
+  margin-top: 10px;
+  font: bold 18px/2 "Microsoft Yahei", Tahoma, Simsun, sans-serif, -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti;
+  color: #fff;
+}
+
+.list-l .title-list .title-list-content dl dd a {
+  font: 14px/2 "Microsoft Yahei", Tahoma, Simsun, sans-serif, -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti;
+  color: #fff;
+}
+
+.list-l .list-l-product {
+  padding: 0 20px;
+  margin-top: 10px;
+  background-color: #fff;
+}
+
+.list-l .list-l-product > h3 {
+  padding: 10px 0;
+  background: url(../../images/icon7.png) 120px center no-repeat;
+  font: bold 16px/23px "Microsoft Yahei", Tahoma, Simsun, sans-serif, -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti;
+  color: #666;
+}
+
+.list-l .list-l-product .product-items-content .product-items {
+  display: block;
+  padding: 8px 0;
+  margin-bottom: 8px;
+  border-bottom: 1px solid #ccc;
+}
+
+.list-l .list-l-product .product-items-content .product-items .img {
+  margin-bottom: 10px;
+  width: 150px;
+  height: 150px;
+  line-height: 150px;
+  background-color: #ccc;
+  text-align: center;
+  font-size: 0;
+}
+
+.list-l .list-l-product .product-items-content .product-items .img > img {
+  vertical-align: middle;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.list-l .list-l-product .product-items-content .product-items h5 {
+  font: 14px/1.5 "Microsoft Yahei", Tahoma, Simsun, sans-serif, -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti;
+  color: #666;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
+  word-break: break-all;
+  white-space: nowrap;
+  width: 150px;
+}
+
+.list-l .list-l-product .product-items-content .product-items p {
+  font: 14px/1.5 "Microsoft Yahei", Tahoma, Simsun, sans-serif, -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti;
+  color: #666;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
+  word-break: break-all;
+  white-space: nowrap;
+  width: 150px;
+}
+
+.list-l .list-l-product .product-items-content .product-items h6 {
+  font: bold 14px/1.5 "Microsoft Yahei", Tahoma, Simsun, sans-serif, -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti;
+  color: #c01132;
+}
+
+.list-l .list-l-product .product-items-content .product-items:first-child + div + div {
+  border-bottom: 0;
+}
+
+.list-l .list-l-product-foot {
+  margin-top: 10px;
+}
+
+.list-l .list-l-product-foot img {
+  width: 100%;
+}
+
+.list-r {
+  margin-left: 200px;
+}
+
+.list-r .list-r-tilte .list-r-tilte-l {
+  padding: 10px 0;
+  float: left;
+}
+
+.list-r .list-r-tilte .list-r-tilte-l h4 {
+  display: inline-block;
+  vertical-align: middle;
+  font: bold 14px/2 "Microsoft Yahei", Tahoma, Simsun, sans-serif, -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti;
+  color: #666;
+}
+
+.list-r .list-r-tilte .list-r-tilte-l ul {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.list-r .list-r-tilte .list-r-tilte-l ul li {
+  float: left;
+}
+
+.list-r .list-r-tilte .list-r-tilte-l ul li a {
+  padding: 0 5px;
+  font: 14px/1 "Microsoft Yahei", Tahoma, Simsun, sans-serif, -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti;
+  color: #666;
+  border-left: 1px solid #999;
+}
+
+.list-r .list-r-tilte .list-r-tilte-l ul li:first-child a {
+  border-left: 0;
+}
+
+.list-r .list-r-tilte .list-r-tilte-r {
+  padding: 10px 0;
+  float: right;
+  width: 190px;
+  height: auto;
+  background: #c31032;
+  background: -webkit-gradient(linear, left top, left bottom, from(#e60133), to(#c01132));
+  background: -webkit-linear-gradient(#e60133, #c01132);
+  background: -o-linear-gradient(#e60133, #c01132);
+  background: linear-gradient(#e60133, #c01132);
+}
+
+.list-r .list-r-tilte .list-r-tilte-r a {
+  display: inline-block;
+  width: 92px;
+  text-align: center;
+  font: 14px/16px "Microsoft Yahei", Tahoma, Simsun, sans-serif, -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti;
+  color: #fff;
+  border-right: 1px solid #fff;
+}
+
+.list-r .list-r-tilte .list-r-tilte-r a:first-child + a {
+  border-right: 0;
+}
