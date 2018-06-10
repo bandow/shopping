@@ -18,7 +18,6 @@
 -------------------------- */
 .container-list {
   margin-bottom: 20px;
-  /*overflow:unset;*/
 }
 
 .list-l {
@@ -26,65 +25,8 @@
   width: 190px;
 }
 
-.list-l .title-list {
-  position: relative;
-  width: 190px;
-  height: 40px;
-}
-
-.list-l .title-list h3 {
-  position: relative;
-  padding: 0 20px;
-  font: bold 18px/40px "Microsoft Yahei", Tahoma, Simsun, sans-serif, -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti;
-  color: #fff;
-  background-color: #818181;
-  cursor: pointer;
-}
-
-.list-l .title-list h3:before {
-  position: absolute;
-  right: 20px;
-  top: 18px;
-  content: '';
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 5px;
-  border-color: #bf1132 transparent transparent transparent;
-}
-
-.list-l .title-list .title-list-content {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1;
-  display: none;
-  padding: 10px;
-  width: 190px;
-  background: #000;
-  background: rgba(0, 0, 0, 0.8);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#c8000000,endColorstr=#c8000000);
-}
-
-.list-l .title-list .title-list-content dl {
-  display: block;
-}
-
-.list-l .title-list .title-list-content dl dt {
-  display: block;
-  margin-top: 10px;
-  font: bold 18px/2 "Microsoft Yahei", Tahoma, Simsun, sans-serif, -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti;
-  color: #fff;
-}
-
-.list-l .title-list .title-list-content dl dd a {
-  font: 14px/2 "Microsoft Yahei", Tahoma, Simsun, sans-serif, -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti;
-  color: #fff;
-}
-
 .list-l .list-l-product {
   padding: 0 20px;
-  margin-top: 10px;
   background-color: #fff;
 }
 
@@ -161,59 +103,143 @@
   margin-left: 200px;
 }
 
-.list-r .list-r-tilte .list-r-tilte-l {
-  padding: 10px 0;
-  float: left;
+.list-r .list-r-nav {
+  padding: 10px;
+  background-color: #fff;
+  overflow: hidden;
 }
 
-.list-r .list-r-tilte .list-r-tilte-l h4 {
+.list-r .list-r-nav .list-r-nav-l {
+  float: left;
+  padding: 7px 0 10px 7px;
+}
+
+.list-r .list-r-nav .list-r-nav-l .t h4, .list-r .list-r-nav .list-r-nav-l .b h4 {
+  margin-right: 20px;
   display: inline-block;
-  vertical-align: middle;
   font: bold 14px/2 "Microsoft Yahei", Tahoma, Simsun, sans-serif, -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti;
   color: #666;
 }
 
-.list-r .list-r-tilte .list-r-tilte-l ul {
+.list-r .list-r-nav .list-r-nav-l .t ul, .list-r .list-r-nav .list-r-nav-l .b ul {
   display: inline-block;
-  vertical-align: middle;
 }
 
-.list-r .list-r-tilte .list-r-tilte-l ul li {
-  float: left;
-}
-
-.list-r .list-r-tilte .list-r-tilte-l ul li a {
-  padding: 0 5px;
+.list-r .list-r-nav .list-r-nav-l .t ul li, .list-r .list-r-nav .list-r-nav-l .b ul li {
+  display: inline-block;
   font: 14px/1 "Microsoft Yahei", Tahoma, Simsun, sans-serif, -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti;
   color: #666;
-  border-left: 1px solid #999;
+  border-right: 1px solid #999;
+  padding-right: 10px;
+  margin-right: 5px;
+  cursor: pointer;
 }
 
-.list-r .list-r-tilte .list-r-tilte-l ul li:first-child a {
-  border-left: 0;
+.list-r .list-r-nav .list-r-nav-l .t ul li:hover, .list-r .list-r-nav .list-r-nav-l .b ul li:hover {
+  color: #c21032;
 }
 
-.list-r .list-r-tilte .list-r-tilte-r {
-  padding: 10px 0;
-  float: right;
-  width: 190px;
-  height: auto;
-  background: #c31032;
-  background: -webkit-gradient(linear, left top, left bottom, from(#e60133), to(#c01132));
-  background: -webkit-linear-gradient(#e60133, #c01132);
-  background: -o-linear-gradient(#e60133, #c01132);
-  background: linear-gradient(#e60133, #c01132);
+.list-r .list-r-nav .list-r-nav-l .t ul li.on, .list-r .list-r-nav .list-r-nav-l .b ul li.on {
+  color: #c21032;
 }
 
-.list-r .list-r-tilte .list-r-tilte-r a {
+.list-r .list-r-nav .list-r-nav-l .t span, .list-r .list-r-nav .list-r-nav-l .b span {
   display: inline-block;
-  width: 92px;
-  text-align: center;
-  font: 14px/16px "Microsoft Yahei", Tahoma, Simsun, sans-serif, -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti;
-  color: #fff;
-  border-right: 1px solid #fff;
+  font: 14px/1 "Microsoft Yahei", Tahoma, Simsun, sans-serif, -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti;
+  color: #c21032;
+  cursor: pointer;
 }
 
-.list-r .list-r-tilte .list-r-tilte-r a:first-child + a {
-  border-right: 0;
+.list-r .list-r-nav .list-r-nav-r {
+  float: right;
+  font-size: 0;
+}
+
+.list-r .list-r-prodect {
+  margin-top: 10px;
+  overflow: hidden;
+}
+
+.list-r .list-r-prodect .list-r-prodect-items {
+  padding: 15px;
+  margin: 10px 10px 0 0;
+  float: left;
+  width: 190px;
+  background-color: #fff;
+}
+
+.list-r .list-r-prodect .list-r-prodect-items .img {
+  display: block;
+  margin-bottom: 10px;
+  width: 160px;
+  height: 160px;
+  line-height: 160px;
+  background-color: #ccc;
+  text-align: center;
+  font-size: 0;
+}
+
+.list-r .list-r-prodect .list-r-prodect-items .img > img {
+  vertical-align: middle;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.list-r .list-r-prodect .list-r-prodect-items h5 a {
+  display: block;
+  font: 14px/1.8 "Microsoft Yahei", Tahoma, Simsun, sans-serif, -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti;
+  color: #666;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
+  word-break: break-all;
+  white-space: nowrap;
+  width: 150px;
+}
+
+.list-r .list-r-prodect .list-r-prodect-items p a {
+  display: block;
+  font: 14px/1.8 "Microsoft Yahei", Tahoma, Simsun, sans-serif, -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti;
+  color: #666;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
+  word-break: break-all;
+  white-space: nowrap;
+  width: 150px;
+}
+
+.list-r .list-r-prodect .list-r-prodect-items h6 {
+  font: bold 14px/1.8 "Microsoft Yahei", Tahoma, Simsun, sans-serif, -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti;
+  color: #c01132;
+}
+
+.list-r .list-r-prodect .list-r-prodect-items .btn {
+  margin-top: 5px;
+  padding: 0 10px;
+  display: block;
+  width: 160px;
+  height: 32px;
+  border: 1px solid #ccc;
+  font: 14px/30px "Microsoft Yahei", Tahoma, Simsun, sans-serif, -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti;
+  color: #666;
+  background: url(../../images/list_icon2.png) #fff 134px center no-repeat;
+}
+
+.list-r .list-r-prodect .list-r-prodect-items .btn:hover {
+  color: #fff;
+  border: 1px solid #c21032;
+  background: url(../../images/list_icon1.png) #c21032 134px center no-repeat;
+}
+
+.list-r .list-r-prodect .list-r-prodect-items:first-child + div + div + div + div {
+  margin-right: 0;
+}
+
+.list-r .list-r-prodect .list-r-prodect-items:first-child + div + div + div + div + div + div + div + div + div {
+  margin-right: 0;
+}
+
+.list-r .list-r-prodect .list-r-prodect-items:first-child + div + div + div + div + div + div + div + div + div + div + div + div + div + div {
+  margin-right: 0;
 }

@@ -1,63 +1,12 @@
 @import 'variable';
 .container-list{
 	margin-bottom:20px;
-	 /*overflow:unset;*/
 }
 .list-l{
 	float:left;
 	width:190px;
-	.title-list{
-		position:relative;
-		width:190px;
-    	height:40px;
-		h3{
-			position:relative;
-			padding:0 20px;
-			font:bold 18px/40px $font-style-base;
-			color:#fff;
-			background-color:#818181;
-			cursor:pointer;
-			&:before{
-				position:absolute;
-				right:20px;
-				top:18px;
-				content:'';
-				width:0;
-				height:0;
-				border-style:solid;
-				border-width:5px;
-  				border-color:#bf1132 transparent transparent transparent;
-			}
-		}
-		.title-list-content{
-			position:absolute;
-			top:0;
-			left:0;
-			z-index:1;
-			display:none;
-			padding:10px;
-			width:190px;
-			background:#000;
-			background:rgba(0,0,0,.8);
-        	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#c8000000,endColorstr=#c8000000);
-			dl{
-				display:block;
-				dt{
-					display:block;
-					margin-top:10px;
-					font:bold 18px/2 $font-style-base;
-					color:#fff;
-				}
-				dd a{
-					font:14px/2 $font-style-base;
-					color:#fff;
-				}
-			}
-		}
-	}
 	.list-l-product{
 		padding:0 20px;
-		margin-top:10px;
 		background-color:#fff;
 		>h3{
 			padding:10px 0;
@@ -122,51 +71,124 @@
 }
 .list-r{
 	margin-left:200px;
-	.list-r-tilte{
-		.list-r-tilte-l{
-			padding:10px 0;
+	.list-r-nav{
+		padding:10px;
+		background-color:#fff;
+		overflow:hidden;
+		.list-r-nav-l{
 			float:left;
-			h4{
-				display:inline-block;
-				vertical-align: middle;
-				font:bold 14px/2 $font-style-base;
-				color:#666;
-			}
-			ul{
-				display:inline-block;
-				vertical-align: middle;
-				li{
-					float:left;
-					a{
-						padding:0 5px;
+			padding:7px 0 10px 7px;
+			.t,.b{
+				h4{
+					margin-right:20px;
+					display:inline-block;
+					font:bold 14px/2 $font-style-base;
+					color:#666;
+				}
+				ul{
+					display:inline-block;
+					li{
+						display:inline-block;
 						font:14px/1 $font-style-base;
 						color:#666;
-						border-left:1px solid #999;
+						border-right:1px solid #999;
+						padding-right:10px;
+						margin-right:5px;
+						cursor:pointer;
+						&:hover{
+							color:#c21032;
+						}
 					}
-					&:first-child a{
-						border-left:0;
+					li.on{
+						color:#c21032;
 					}
+				}
+				span{
+					display:inline-block;
+					font:14px/1 $font-style-base;
+					color:#c21032;
+					cursor:pointer;
 				}
 			}
 		}
-		.list-r-tilte-r{
-			padding:10px 0;
+		.list-r-nav-r{
 			float:right;
+			font-size:0;
+		}
+	}
+	.list-r-prodect{
+		margin-top:10px;
+		overflow:hidden;
+		.list-r-prodect-items{
+			padding:15px;
+			margin:10px 10px 0 0;
+			float:left;
 			width:190px;
-			height:auto;
-			background:#c31032;
-			background:linear-gradient(#e60133, #c01132); 
-			a{
-				display:inline-block;
-				width:92px;
+			background-color:#fff;
+			.img{
+				display:block;
+				margin-bottom:10px;
+				width:160px;
+				height:160px;
+				line-height:160px;
+				background-color:#ccc;
 				text-align:center;
-				font:14px/16px $font-style-base;
-				color:#fff;
-				border-right:1px solid #fff;
-				&:first-child + a{
-					border-right:0;
+				font-size:0;
+				>img{
+					vertical-align:middle;
+					max-width: 100%;
+					max-height: 100%;
+				}	
+			}
+			h5 a{
+				display: block;
+				font:14px/1.8 $font-style-base;
+				color:#666;		
+				overflow: hidden;
+			    text-overflow: ellipsis;
+			    word-break: break-all;
+			    white-space: nowrap;
+			    width: 150px;
+			}
+			p a{
+				display: block;
+				font:14px/1.8 $font-style-base;
+				color:#666;	
+				overflow: hidden;
+			    text-overflow: ellipsis;
+			    word-break: break-all;
+			    white-space: nowrap;
+			    width:150px;	
+			}
+			h6{
+				font:bold 14px/1.8 $font-style-base;
+				color:#c01132;		
+			}
+			.btn{
+				margin-top:5px;
+				padding:0 10px;
+				display:block;
+				width:160px;
+				height:32px;
+				border:1px solid #ccc;
+				font:14px/30px $font-style-base;
+				color:#666;	
+				background:url(../../images/list_icon2.png) #fff 134px center no-repeat;
+				&:hover{
+					color:#fff;	
+					border:1px solid #c21032;
+					background:url(../../images/list_icon1.png) #c21032 134px center no-repeat;
 				}
 			}
+			&:first-child + div + div + div + div{
+				margin-right:0;
+			}
+			&:first-child + div + div + div + div+ div + div + div + div + div{
+				margin-right:0;
+			}
+			&:first-child + div + div + div + div+ div + div + div + div + div+ div + div + div + div + div{
+				margin-right:0;
+			}	
 		}
 	}
 }
