@@ -16,8 +16,199 @@
 -------------------------- */
 /* Transition
 -------------------------- */
+.nav-slide {
+  overflow: hidden;
+}
+
+.nav-slide .nav-l {
+  position: relative;
+  float: left;
+  width: 190px;
+}
+
+.nav-slide .nav-l .nav-l-out {
+  width: 190px;
+  background: #353b44;
+  /*background:rgba(0,0,0,.8);*/
+  /*filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#c8000000,endColorstr=#c8000000);*/
+}
+
+.nav-slide .nav-l .nav-l-out dl {
+  padding: 5px 10px;
+  display: block;
+  cursor: pointer;
+}
+
+.nav-slide .nav-l .nav-l-out dl dt {
+  display: block;
+  font: bold 18px/2 "Microsoft Yahei", Tahoma, Simsun, sans-serif, -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti;
+  color: #fff;
+}
+
+.nav-slide .nav-l .nav-l-out dl dd a {
+  font: 14px/2 "Microsoft Yahei", Tahoma, Simsun, sans-serif, -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti;
+  color: #fff;
+}
+
+.nav-slide .nav-l .nav-l-out dl .cate_part {
+  position: absolute;
+  top: 0;
+  left: 190px;
+  bottom: 0;
+  z-index: 3;
+  padding: 10px;
+  display: none;
+  background-color: #fff;
+  width: 320px;
+}
+
+.nav-slide .nav-l .nav-l-out dl .cate_part ul li {
+  float: left;
+  margin-left: 20px;
+  font: 14px/2.4 "Microsoft Yahei", Tahoma, Simsun, sans-serif, -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti;
+  color: #666;
+  cursor: pointer;
+}
+
+.nav-slide .nav-l .nav-l-out dl .cate_part ul li:hover {
+  color: #bf1132;
+}
+
+.nav-slide .nav-l .nav-l-out dl.on {
+  background-color: #bf1132;
+}
+
+.nav-slide .nav-slide-middle {
+  margin: 0 210px 0 190px;
+  height: 444px;
+  overflow: hidden;
+}
+
+.nav-slide .nav-slide-middle .swiper-container {
+  height: 444px;
+}
+
+.nav-slide .nav-slide-middle .swiper-container > a {
+  position: absolute;
+  top: 50%;
+  z-index: 20;
+  margin-top: -17px;
+  display: block;
+  font-size: 0;
+  width: 34px;
+  height: 34px;
+  text-align: center;
+  line-height: 34px;
+  background: rgba(0, 0, 0, 0.5);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#7f000000,endColorstr=#7f000000);
+}
+
+.nav-slide .nav-slide-middle .swiper-container > a > img {
+  vertical-align: middle;
+}
+
+.nav-slide .nav-slide-middle .swiper-container .arrow-left {
+  left: 0;
+}
+
+.nav-slide .nav-slide-middle .swiper-container .arrow-right {
+  right: 0;
+}
+
+.nav-slide .nav-slide-middle .pagination {
+  position: absolute;
+  z-index: 20;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+}
+
+.nav-slide .nav-slide-middle .swiper-pagination-switch {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 100px;
+  background: rgba(255, 255, 255, 0.5);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#7fffffff,endColorstr=#7fffffff);
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.nav-slide .nav-slide-middle .swiper-active-switch {
+  background: #fff;
+  border: 2px solid #fff;
+  border-radius: 100px;
+}
+
+.nav-slide .nav-slide-r {
+  float: right;
+  width: 190px;
+}
+
+.nav-slide .nav-slide-r .nav-slide-r-title {
+  padding: 10px 0;
+  height: auto;
+  background: #c31032;
+  background: -webkit-gradient(linear, left top, left bottom, from(#e60133), to(#c01132));
+  background: -webkit-linear-gradient(#e60133, #c01132);
+  background: -o-linear-gradient(#e60133, #c01132);
+  background: linear-gradient(#e60133, #c01132);
+}
+
+.nav-slide .nav-slide-r .nav-slide-r-title a {
+  display: inline-block;
+  width: 92px;
+  text-align: center;
+  font: 14px/16px "Microsoft Yahei", Tahoma, Simsun, sans-serif, -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti;
+  color: #fff;
+  border-right: 1px solid #fff;
+}
+
+.nav-slide .nav-slide-r .nav-slide-r-title a:first-child + a {
+  border-right: 0;
+}
+
+.nav-slide .nav-slide-r .nav-slide-r-about {
+  margin-top: 10px;
+  background-color: #fff;
+}
+
+.nav-slide .nav-slide-r .nav-slide-r-about .items {
+  display: block;
+  padding: 10px;
+  height: 131px;
+  border-bottom: 1px solid #ddd;
+}
+
+.nav-slide .nav-slide-r .nav-slide-r-about .items h3 {
+  font: 18px/1.5 "Microsoft Yahei", Tahoma, Simsun, sans-serif, -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti;
+  color: #333;
+}
+
+.nav-slide .nav-slide-r .nav-slide-r-about .items p {
+  font: 14px/1.5 "Microsoft Yahei", Tahoma, Simsun, sans-serif, -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti;
+  color: #999;
+}
+
+.nav-slide .nav-slide-r .nav-slide-r-about .items:first-child {
+  background: url(../../images/icon13.png) 128px 60px no-repeat;
+}
+
+.nav-slide .nav-slide-r .nav-slide-r-about .items:first-child + a {
+  background: url(../../images/icon14.png) 10px 60px no-repeat;
+}
+
+.nav-slide .nav-slide-r .nav-slide-r-about .items:first-child + a h3, .nav-slide .nav-slide-r .nav-slide-r-about .items:first-child + a p {
+  text-align: right;
+}
+
+.nav-slide .nav-slide-r .nav-slide-r-about .items:first-child + a + a {
+  border-bottom: 0;
+  background: url(../../images/icon15.png) 124px 65px no-repeat;
+}
+
 .news {
-  margin: 10px 0 0 0;
+  margin: 15px 0 0 0;
   overflow: hidden;
 }
 
@@ -89,7 +280,7 @@
 }
 
 .hot-product {
-  margin: 10px 0 30px;
+  margin: 15px 0 30px;
   background-color: #fff;
 }
 
@@ -134,9 +325,10 @@
 }
 
 .hot-product .product-list .items .img {
+  margin-bottom: 10px;
   font-size: 0;
-  witdh: 220px;
-  heihgt: 220px;
+  width: 220px;
+  height: 220px;
 }
 
 .hot-product .product-list .items .img img {
@@ -144,7 +336,7 @@
 }
 
 .hot-product .product-list .items h4 {
-  font: 18px/2 "Microsoft Yahei", Tahoma, Simsun, sans-serif, -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti;
+  font: 18px/1.8 "Microsoft Yahei", Tahoma, Simsun, sans-serif, -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti;
   color: #333;
   overflow: hidden;
   -o-text-overflow: ellipsis;
