@@ -56,7 +56,7 @@
 					font:bold 14px/1.5 $font-style-base;
 					color:#c01132;		
 				}
-				&:first-child +div+div{
+				&:first-child +a+a{
 					border-bottom:0;
 				}
 			}

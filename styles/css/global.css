@@ -287,7 +287,7 @@ body {
   position: absolute;
   left: 0;
   top: 50px;
-  z-index: 1;
+  z-index: 4;
   display: none;
   padding: 10px 5px 10px 10px;
   background-color: #fff;
@@ -477,7 +477,6 @@ body {
   left: 0;
   z-index: 1;
   display: none;
-  padding: 10px;
   width: 190px;
   background: #000;
   background: rgba(0, 0, 0, 0.8);
@@ -485,12 +484,13 @@ body {
 }
 
 .nev .title-list .title-list-content dl {
+  padding: 5px 10px;
   display: block;
+  cursor: pointer;
 }
 
 .nev .title-list .title-list-content dl dt {
   display: block;
-  margin-top: 10px;
   font: bold 18px/2 "Microsoft Yahei", Tahoma, Simsun, sans-serif, -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti;
   color: #fff;
 }
@@ -498,6 +498,34 @@ body {
 .nev .title-list .title-list-content dl dd a {
   font: 14px/2 "Microsoft Yahei", Tahoma, Simsun, sans-serif, -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti;
   color: #fff;
+}
+
+.nev .title-list .title-list-content dl .cate_part {
+  position: absolute;
+  top: 0;
+  left: 190px;
+  bottom: 0;
+  z-index: 3;
+  padding: 10px;
+  display: none;
+  background-color: #fff;
+  width: 320px;
+}
+
+.nev .title-list .title-list-content dl .cate_part ul li {
+  float: left;
+  margin-left: 20px;
+  font: 14px/2.4 "Microsoft Yahei", Tahoma, Simsun, sans-serif, -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti;
+  color: #666;
+  cursor: pointer;
+}
+
+.nev .title-list .title-list-content dl .cate_part ul li:hover {
+  color: #bf1132;
+}
+
+.nev .title-list .title-list-content dl.on {
+  background-color: #bf1132;
 }
 
 .nev .list-r-tilte {

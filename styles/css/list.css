@@ -87,7 +87,7 @@
   color: #c01132;
 }
 
-.list-l .list-l-product .product-items-content .product-items:first-child + div + div {
+.list-l .list-l-product .product-items-content .product-items:first-child + a + a {
   border-bottom: 0;
 }
 

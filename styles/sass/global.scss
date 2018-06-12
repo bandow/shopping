@@ -88,7 +88,7 @@ body{
 				position:absolute;
 				left:0;
 			    top:50px;
-			    z-index: 1;
+			    z-index: 4;
 			    display:none;
 				padding:10px 5px 10px 10px;
 				background-color:#fff;
@@ -252,16 +252,16 @@ body{
 			left:0;
 			z-index:1;
 			display:none;
-			padding:10px;
 			width:190px;
 			background:#000;
 			background:rgba(0,0,0,.8);
         	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#c8000000,endColorstr=#c8000000);
 			dl{
+				padding:5px 10px;
 				display:block;
+				cursor:pointer;
 				dt{
 					display:block;
-					margin-top:10px;
 					font:bold 18px/2 $font-style-base;
 					color:#fff;
 				}
@@ -269,6 +269,30 @@ body{
 					font:14px/2 $font-style-base;
 					color:#fff;
 				}
+				.cate_part{
+					position:absolute;
+					top:0;
+					left:190px;
+					bottom:0;
+					z-index:3;
+					padding:10px;
+					display:none;
+					background-color:#fff;
+					width:320px;
+					ul li{
+						float:left;
+						margin-left:20px;
+						font:14px/2.4 $font-style-base;
+						color:#666;
+						cursor:pointer;
+						&:hover{
+							color:#bf1132;	
+						}
+					}
+				}
+			}
+			dl.on{
+				background-color:#bf1132;
 			}
 		}
 	}
