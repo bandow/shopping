@@ -8,6 +8,7 @@
     <meta name="author" content="name, sycbbb@sina.com"/>
     <meta name="robots" content="index,follow"/>
 	<title></title>
+	<link rel="stylesheet" href="../plugins/swiper/idangerous.swiper.css">
 	<link rel="stylesheet" href="../styles/css/global.css">
 	<link rel="stylesheet" href="../styles/css/detail.css">
 </head>
@@ -243,7 +244,40 @@
 			<div class="detail-l">
 				<div class="detail-l-t">
 					<div class="detail-l-t-l">
-						
+						<div class="view">
+					        <div class="swiper-container">
+					            <a class="arrow-left" href="javascript:;"></a>
+					            <a class="arrow-right" href="javascript:;"></a>
+					            <div class="swiper-wrapper">
+					                 <div class="swiper-slide">
+					                    <img src="../images/product1.jpg" alt="">
+					                </div>
+					                <div class="swiper-slide">
+					                    <img src="../images/product2.jpg" alt="">
+					                </div>
+					                <div class="swiper-slide">
+					                    <img src="../images/product3.jpg" alt="">
+					                </div>
+					            </div>
+					        </div>
+					    </div>
+					    <div class="preview">
+					        <div class="swiper-container">
+					            <div class="swiper-wrapper">
+					                <div class="swiper-slide">
+					                    <img src="../images/product1.jpg" alt="">
+					                </div>
+					                <div class="swiper-slide">
+					                    <img src="../images/product2.jpg" alt="">
+					                </div>
+					                <div class="swiper-slide">
+					                    <img src="../images/product3.jpg" alt="">
+					                </div>
+					            </div>
+					            <a class="arrow-left" href="javascript:;">456</a>
+					            <a class="arrow-right" href="javascript:;">645654</a>
+					        </div>
+					    </div>
 					</div>
 					<div class="detail-l-t-r">
 						<div class="title-num">
@@ -395,6 +429,7 @@
 	</div>
 	<script src="../plugins/jquery/jquery.min.js"></script>
 	<script src="../plugins/jquery/jquery.nicescroll.min.js"></script>
+	<script src="../plugins/swiper/idangerous.swiper.min.js"></script>
 	<script>
 		$(function(){
 			//滚动条
@@ -449,6 +484,57 @@
 				}
 			})
 		});
+	</script>
+	<script>
+		var viewSwiper = new Swiper('.view .swiper-container', {
+	        onSlideChangeStart: function() {
+	            updateNavPosition()
+	        }
+	    })
+	    $('.view .arrow-left,.preview .arrow-left').on('click', function(e) {
+	        e.preventDefault()
+	        if (viewSwiper.activeIndex == 0) {
+	            viewSwiper.swipeTo(viewSwiper.slides.length - 1, 1000);
+	            return
+	        }
+	        viewSwiper.swipePrev()
+	    })
+	    $('.view .arrow-right,.preview .arrow-right').on('click', function(e) {
+	        e.preventDefault()
+	        if (viewSwiper.activeIndex == viewSwiper.slides.length - 1) {
+	            viewSwiper.swipeTo(0, 1000);
+	            return
+	        }
+	        viewSwiper.swipeNext()
+	    })
+	    var previewSwiper = new Swiper('.preview .swiper-container', {
+	        visibilityFullFit: true,
+	        slidesPerView: 'auto',
+	        onlyExternal: true,
+	        onSlideClick: function() {
+	            viewSwiper.swipeTo(previewSwiper.clickedSlideIndex)
+	        }
+	    })
+	    function showSwiper(index) {
+	        $('#swiperPc').removeClass('hide');
+	        $('.mask').removeClass('hide');
+	        viewSwiper.swipeTo(index, 1000, false);
+	        previewSwiper.swipeTo(index, 1000, false);
+	        $('.preview .active-nav').removeClass('active-nav')
+	        $('.preview .swiper-slide').eq(viewSwiper.activeIndex).addClass('active-nav');
+	    }
+	    function updateNavPosition() {
+	        $('.preview .active-nav').removeClass('active-nav')
+	        var activeNav = $('.preview .swiper-slide').eq(viewSwiper.activeIndex).addClass('active-nav')
+	        if (!activeNav.hasClass('swiper-slide-visible')) {
+	            if (activeNav.index() > previewSwiper.activeIndex) {
+	                var thumbsPerNav = Math.floor(previewSwiper.width / activeNav.width()) - 1
+	                previewSwiper.swipeTo(activeNav.index() - thumbsPerNav)
+	            } else {
+	                previewSwiper.swipeTo(activeNav.index())
+	            }
+	        }
+	    }
 	</script>
 	<!-- 以下是针对ie9以下才执行的js代码 注意不要删掉哦！！！ -->
 	<!--[if lt IE 9 ]>    
