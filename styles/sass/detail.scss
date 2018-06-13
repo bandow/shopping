@@ -9,11 +9,77 @@
 		padding:15px;
 		margin-bottom:15px;
 		background:url(../../images/detail_icon2.png) #fff 952px 388px no-repeat;
+	    height: auto;
+    	overflow: hidden;
 		.detail-l-t-l{
 			float:left;
+			.view{
+				width:380px;
+				height:340px;
+				background-color:#fbfbf4;
+			    overflow: hidden;
+				.swiper-slide {
+				    text-align: center;
+				    line-height: 340px;
+				    font-size: 0;
+				    >img{
+				    	vertical-align:middle;
+			    	    max-height: 100%;
+    					max-width: 100%;
+				    }
+				}
+			}
+			.preview{
+				position:relative;
+				margin:15px 0 0 0;
+				width:380px;
+				height:60px;
+				overflow:hidden;
+				.swiper-slide {
+					.img{
+						margin-right:10px;
+						float:left;
+						width:70px;
+						height:58px;
+					    text-align: center;
+					    font-size:0;
+					    border:1px solid #ccc;
+					    >img{
+					    	max-width:100%;
+					    	max-height:100%;
+					    	vertical-align:middle;
+					    }
+					}
+				}
+				.active-nav{
+					.img{ border:1px solid #d60039;}
+				}
+				.arrow-left,.arrow-right{
+					position:absolute;
+					top:50%;
+					z-index:20;
+	    			margin-top:-17px;
+					width:24px;
+					height:34px;
+					background:rgba(0,0,0,.5);
+	    			filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#7f000000,endColorstr=#7f000000);	
+	    			text-align: center;
+				    font-size: 0;
+				    line-height:34px;
+	    			>img{
+	    				vertical-align:middle;
+	    			}	
+				}
+				.arrow-left{
+					left:0;
+				}
+				.arrow-right{
+					right:0;
+				}
+			}
 		}
 		.detail-l-t-r{
-			margin-left:400px;
+			margin-left:420px;
 			.title-num{
 				overflow:hidden;
 				.title-num-l{
@@ -49,7 +115,7 @@
 				color:#666;	
 			}
 			.detail-card{
-				margin-top:30px;
+				margin-top:62px;
 				.detail-card-l{
 					float:left;
 					label{

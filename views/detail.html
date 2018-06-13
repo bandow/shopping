@@ -81,7 +81,7 @@
 					<a href="">你好，程丽萍 ›</a>
 					<div class="login-list">
 						<a href="">我的基本信息</a>
-						<a href="">我的订单(<em>8</em>)</a>
+						<a href="order.html">我的订单(<em>8</em>)</a>
 						<a href="">我的收藏(<em>12</em>)</a>
 					</div>
 				</div>
@@ -250,6 +250,15 @@
 					            <a class="arrow-right" href="javascript:;"></a>
 					            <div class="swiper-wrapper">
 					                 <div class="swiper-slide">
+					                    <img src="../images/a1.jpg" alt="">
+					                </div>
+					                <div class="swiper-slide">
+					                    <img src="../images/product2.jpg" alt="">
+					                </div>
+					                <div class="swiper-slide">
+					                    <img src="../images/product3.jpg" alt="">
+					                </div>
+					                 <div class="swiper-slide">
 					                    <img src="../images/product1.jpg" alt="">
 					                </div>
 					                <div class="swiper-slide">
@@ -265,18 +274,27 @@
 					        <div class="swiper-container">
 					            <div class="swiper-wrapper">
 					                <div class="swiper-slide">
-					                    <img src="../images/product1.jpg" alt="">
+					                    <div class="img"><img src="../images/a1.jpg" alt=""></div>
 					                </div>
 					                <div class="swiper-slide">
-					                    <img src="../images/product2.jpg" alt="">
+					                    <div class="img"><img src="../images/product2.jpg" alt=""></div>
 					                </div>
 					                <div class="swiper-slide">
-					                    <img src="../images/product3.jpg" alt="">
+					                    <div class="img"><img src="../images/product3.jpg" alt=""></div>
+					                </div>
+					                 <div class="swiper-slide">
+					                    <div class="img"><img src="../images/product1.jpg" alt=""></div>
+					                </div>
+					                 <div class="swiper-slide">
+					                    <div class="img"><img src="../images/product2.jpg" alt=""></div>
+					                </div>
+					                 <div class="swiper-slide">
+					                    <div class="img"><img src="../images/product3.jpg" alt=""></div>
 					                </div>
 					            </div>
-					            <a class="arrow-left" href="javascript:;">456</a>
-					            <a class="arrow-right" href="javascript:;">645654</a>
 					        </div>
+					         <a class="arrow-left" href="javascript:;"><img src="../images/l.png" alt=""></a>
+					         <a class="arrow-right" href="javascript:;"><img src="../images/r.png" alt=""></a>
 					    </div>
 					</div>
 					<div class="detail-l-t-r">
@@ -483,6 +501,10 @@
 					$(".total").val(1);
 				}
 			})
+			//运营耗品 
+			$(".list-r-tilte-l li").bind("click",function(){
+				$(this).addClass("on").siblings().removeClass("on");
+			});
 		});
 	</script>
 	<script>

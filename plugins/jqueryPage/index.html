@@ -1,0 +1,155 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>JQ分页插件</title>
+	<script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+	<script src="pages-min.js"></script>
+<style>
+	.paging{
+		display: inline-block;
+		background: #f9f9f9;
+		padding: 15px;
+		border-radius: 5px;
+		border: 1px solid #ddd;
+	}
+	.pp{
+		display: inline-block;
+		background: #f9f9f9;
+		padding: 10px;
+		border-radius: 5px;
+		border: 1px solid #ddd;
+	}
+	.paging ul{
+		padding: 0;
+		margin: 0;
+		display: inline-block;
+		float: left;
+	}
+	.paging li{
+		display: inline-block;
+		float: left;
+		padding: 6px 12px;
+		cursor: pointer;
+	}
+	.paging li:hover{
+		background-color: #ddd;
+	}
+	.paging-selecte{
+		background-color: #4CAF50!important;
+		color: #fff!important;
+	}
+	.paging-selecte:hover{
+		background-color: #4CAF50!important;
+		color: #fff!important;
+	}
+	.paging input[type='text'],.paging input[type='button']{
+		display: inline-block;
+		margin-top: 0px;
+		border:1px solid #ccc;
+	}
+	.paging input[type='text']{
+		height:25px;
+		width: 50px;
+		border-right: none;
+	}
+	.paging input[type='button']{
+		height:29px;
+		border-left: none;
+		background-color: #fff;
+		cursor: pointer;
+	}
+	.paging ul:nth-child(2){
+		margin-left: 10px;
+	}
+	
+	
+	.a{ 
+		font-family: "Microsoft YaHei", "微软雅黑", "Lantinghei SC", "Open Sans", Arial, "Hiragino Sans GB", "STHeiti", "WenQuanYi Micro Hei", SimSun, sans-serif;
+	text-align: center;
+	margin: 0 200px;
+	margin-top: 70px;
+	background-color: #fff;
+	min-height: 300px;
+	border-radius: 10px;
+	font-size: 16px;
+	padding: 10px;
+	box-sizing:border-box;
+	}
+	.a p{
+		text-align: left;
+		margin: 15px 100px;
+		line-height:30px;
+	</style>
+</head>
+
+<body style="background-color: #eee; margin: 0;padding:0;">
+<div style="width: 100%; background-color: #fff; padding: 5px; text-align: center; margin-top: 10px;box-sizing:border-box;">
+	介绍页配置的CSS样式
+<div class="paging"></div>
+</div>
+<div style="width: 100%; background-color: #fff; padding: 5px; text-align: center;box-sizing:border-box;">
+	预设CSS样式
+<div class="pp"></div>	
+</div>
+<div class="a">
+	<h1>Page是一个基于JQ编写的分页插件</h1>
+	<h4>使用插件只需要导入Js文件后，再添加你的CSS样式就大功告成了！</h4>
+	<hr>
+	<p><b>开始使用:</b><br>
+	$(*).Page({type},class);	* 写入要插件要出现的HTML容器位置，{type}则是配置属性。比如：$('body').Page({});会出现body标签位置，并且会清除body内所有内容，calss是预设的css样式只要回执true就可以使用。
+	<br>兼容性：里面基本没有用到css3的地方，代码全部基于jq编写 使用最新版就好，浏览器兼容 IE 78910 应该都没问题 其他最新就好。
+	<br>	
+	</p>
+	<p><b>常用配置属性</b><span style="font-size: 14px; color: #333; padding-left: 15px;">更多查看js文件</span><br>
+	$(".paging").Page({<br>
+			page:1, // 当前页 默认第一页<br>
+			pages:false, // 总页数 ！必须配置 否则没有页数<br>
+			pageNum:5, // 页码数 共显示多少个页码 默认5 建议设置 奇数 比较美观<br>
+			search:true, // 是否跳转功能 true未开启 false为关闭 默认开启<br>
+			TopDownpage:true, // 是否开启上一页 下一页功能 true未开启 false为关闭 默认开启<br>
+			pageOn:false, // 点击页码时触发事件，默认关 建议填写！格式 pageOn:function(e){/* 你要 执行的代码*/}<br>
+			searchOn:false, //点击跳转时触发事件，默认关 建议填写！格式 searchOn:function(e){/* 你要 执行的代码*/}<br>
+});<br><br>
+	<b>结构</b><br>
+		<span style="color:#f00"><-div->  html 容器</span>
+		<span style="color:#3D00BD"><br><-ul->  /* 页码区</span>
+		<span style="color:#000"><br><-li->页码<-/li-></span>
+		<span style="color:#3D00BD"><br><-/ul->	*/ 页码区结束</span>
+		<span style="color:#00C904"><br><-ul->  /* 跳转区</span>
+		<span style="color:#000"><br><-input->输入框</span>
+		<span style="color:#000"><br><-input->跳转按钮</span>
+		<span style="color:#00C904"><br><-/ul->	*/ 跳转区结束	</span>
+		<span style="color:#f00"><br>	<-/div->html 容器结束</span>
+	</p>
+	<hr>
+	<p><b>运用</b><br>
+		$(".paging").Page({<br>
+	Pages:<-?-php echo(总页数);-?->,<br>
+	PageOn:function(e){$.post(".php",{<br>
+		传递的页码:e<br>
+		},function(data){$(要更新的容器).html(data)}},<br>
+	JumpOn:function(e){$.post(".php",{<br>
+		传递的页码:e<br>
+		},function(data){$(要更新的容器).html(data)}},<br>
+},true);	<br>
+		这样就可以完成一个静态页面的刷新，简单的很~！
+		</p><br>
+	</div>
+</body>
+</html>
+<script>
+
+	
+$(".paging").Page({
+	Pages:500,
+	PageOn:function(e){},
+	JumpOn:function(e){},
+	ActiveClass:"paging-selecte",
+});
+$(".pp").Page({
+	Pages:200,
+	Alert:function(){confirm("注意您，没有绑定对应的点击事件，此条为自定义弹窗")}
+},true);
+
+</script>

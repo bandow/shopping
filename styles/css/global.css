@@ -475,9 +475,8 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 1;
+  z-index: 21;
   display: none;
-  width: 190px;
   background: #000;
   background: rgba(0, 0, 0, 0.8);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#c8000000,endColorstr=#c8000000);
@@ -487,6 +486,7 @@ body {
   padding: 5px 10px;
   display: block;
   cursor: pointer;
+  width: 510px;
 }
 
 .nev .title-list .title-list-content dl dt {
@@ -505,7 +505,7 @@ body {
   top: 0;
   left: 190px;
   bottom: 0;
-  z-index: 3;
+  z-index: 22;
   padding: 10px;
   display: none;
   background-color: #fff;
@@ -576,7 +576,7 @@ body {
   display: none;
   top: 33px;
   left: 0;
-  z-index: 1;
+  z-index: 21;
   padding: 10px;
   width: 188px;
   background-color: #fff;

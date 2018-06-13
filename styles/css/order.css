@@ -1,0 +1,376 @@
+@charset "UTF-8";
+/*
+   公用变量
+*/
+/* color
+-------------------------- */
+/* Border
+-------------------------- */
+/* Box-shadow
+-------------------------- */
+/* Fill
+-------------------------- */
+/* Font
+-------------------------- */
+/* Disable base
+-------------------------- */
+/* Transition
+-------------------------- */
+.order {
+  margin-bottom: 20px;
+  background-color: #fff;
+}
+
+.order .order-top {
+  padding: 15px;
+  border-bottom: 1px solid #ccc;
+  overflow: hidden;
+}
+
+.order .order-top ul {
+  float: left;
+  width: 960px;
+}
+
+.order .order-top ul li {
+  padding: 10px;
+  float: left;
+  width: 320px;
+  border: 1px solid #ccc;
+}
+
+.order .order-top ul li h6 {
+  padding-right: 20px;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: bold;
+  color: #666;
+}
+
+.order .order-top ul li span {
+  display: inline-block;
+  font-size: 14px;
+  color: #999;
+}
+
+.order .order-top ul li:first-child {
+  border-bottom: 0;
+  border-right: 0;
+}
+
+.order .order-top ul li:first-child + li {
+  border-bottom: 0;
+  border-right: 0;
+  background: url(../../images/order_icon1.png) 290px center no-repeat;
+}
+
+.order .order-top ul li:first-child + li + li {
+  border-bottom: 0;
+  background: url(../../images/order_icon2.png) 290px center no-repeat;
+}
+
+.order .order-top ul li:first-child + li + li + li {
+  border-right: 0;
+}
+
+.order .order-top ul li:first-child + li + li + li h6 {
+  border-right: 1px solid #ccc;
+}
+
+.order .order-top ul li:first-child + li + li + li + li {
+  border-right: 0;
+  background: url(../../images/order_icon1.png) 290px center no-repeat;
+}
+
+.order .order-top ul li:first-child + li + li + li + li + li {
+  background: url(../../images/order_icon2.png) 290px center no-repeat;
+}
+
+.order .order-top .order-top-r {
+  float: right;
+  width: 174px;
+  border: 1px solid #ccc;
+}
+
+.order .order-top .order-top-r > .t h5 {
+  display: inline-block;
+  padding: 0 10px;
+  width: 86px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #666;
+  line-height: 40px;
+}
+
+.order .order-top .order-top-r > .t h6 {
+  position: relative;
+  display: inline-block;
+  padding: 0 10px;
+  width: 86px;
+  font-size: 14px;
+  color: #999;
+  line-height: 40px;
+}
+
+.order .order-top .order-top-r > .t h6:before {
+  position: absolute;
+  top: 18px;
+  right: 8px;
+  content: "";
+  width: 0;
+  height: 0;
+  border: solid 4px;
+  border-color: #bf1132 transparent transparent transparent;
+}
+
+.order .order-top .order-top-r > .b {
+  overflow: hidden;
+}
+
+.order .order-top .order-top-r > .b a {
+  padding: 0 10px;
+  float: left;
+  width: 86px;
+  line-height: 43px;
+  font-size: 14px;
+  color: #fff;
+}
+
+.order .order-top .order-top-r > .b a:first-child {
+  border-right: 1px solid #fff;
+  background: url(../../images/order_icon3.png) #bf1132 58px center no-repeat;
+}
+
+.order .order-top .order-top-r > .b a:first-child + a {
+  background: url(../../images/order_icon4.png) #bf1132 58px center no-repeat;
+}
+
+.order .order-middle {
+  padding: 15px;
+}
+
+.order .order-middle dl {
+  background-color: #ddd;
+  width: 100%;
+  height: 40px;
+}
+
+.order .order-middle dl dd {
+  float: left;
+  font-size: 14px;
+  color: #666;
+  line-height: 40px;
+  text-align: center;
+}
+
+.order .order-middle dl dd:first-child {
+  padding-left: 10px;
+  width: 114px;
+  text-align: left;
+}
+
+.order .order-middle dl dd:first-child + dd {
+  width: 100px;
+}
+
+.order .order-middle dl dd:first-child + dd + dd {
+  width: 160px;
+}
+
+.order .order-middle dl dd:first-child + dd + dd + dd {
+  width: 120px;
+}
+
+.order .order-middle dl dd:first-child + dd + dd + dd + dd {
+  width: 120px;
+}
+
+.order .order-middle dl dd:first-child + dd + dd + dd + dd + dd {
+  width: 120px;
+}
+
+.order .order-middle dl dd:first-child + dd + dd + dd + dd + dd + dd {
+  width: 92px;
+}
+
+.order .order-middle dl dd:first-child + dd + dd + dd + dd + dd + dd + dd {
+  width: 92px;
+}
+
+.order .order-middle dl dd:first-child + dd + dd + dd + dd + dd + dd + dd + dd {
+  width: 92px;
+}
+
+.order .order-middle dl dd:first-child + dd + dd + dd + dd + dd + dd + dd + dd + dd {
+  width: 150px;
+}
+
+.order .order-middle .order-middle-content .order-middle-items {
+  overflow: hidden;
+}
+
+.order .order-middle .order-middle-content .order-middle-items ul li {
+  float: left;
+  border-right: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  font-size: 12px;
+  color: #666;
+  height: 60px;
+  display: table;
+  text-align: center;
+}
+
+.order .order-middle .order-middle-content .order-middle-items ul li span {
+  vertical-align: middle;
+  display: table-cell;
+}
+
+.order .order-middle .order-middle-content .order-middle-items ul li span em {
+  display: block;
+}
+
+.order .order-middle .order-middle-content .order-middle-items ul li span a {
+  padding: 0 5px;
+  font-size: 12px;
+  color: #666;
+}
+
+.order .order-middle .order-middle-content .order-middle-items ul li span a:first-child + a + a {
+  color: #c01132;
+}
+
+.order .order-middle .order-middle-content .order-middle-items ul li span a:first-child + a + a + a {
+  color: #c01132;
+}
+
+.order .order-middle .order-middle-content .order-middle-items ul li:first-child {
+  padding-left: 10px;
+  width: 114px;
+  text-align: left;
+}
+
+.order .order-middle .order-middle-content .order-middle-items ul li:first-child + li {
+  width: 100px;
+}
+
+.order .order-middle .order-middle-content .order-middle-items ul li:first-child + li + li {
+  width: 160px;
+}
+
+.order .order-middle .order-middle-content .order-middle-items ul li:first-child + li + li + li {
+  width: 120px;
+}
+
+.order .order-middle .order-middle-content .order-middle-items ul li:first-child + li + li + li + li {
+  width: 120px;
+}
+
+.order .order-middle .order-middle-content .order-middle-items ul li:first-child + li + li + li + li + li {
+  width: 120px;
+}
+
+.order .order-middle .order-middle-content .order-middle-items ul li:first-child + li + li + li + li + li + li {
+  width: 92px;
+}
+
+.order .order-middle .order-middle-content .order-middle-items ul li:first-child + li + li + li + li + li + li + li {
+  width: 92px;
+}
+
+.order .order-middle .order-middle-content .order-middle-items ul li:first-child + li + li + li + li + li + li + li + li {
+  width: 92px;
+}
+
+.order .order-middle .order-middle-content .order-middle-items ul li:first-child + li + li + li + li + li + li + li + li + li {
+  width: 150px;
+}
+
+.order .order-foot {
+  padding: 15px;
+  overflow: hidden;
+}
+
+.order .order-foot .page {
+  float: right;
+}
+
+.order .order-foot .page .pa1 {
+  margin-right: 20px;
+}
+
+.order .order-foot .page .pa1 li {
+  float: left;
+  padding: 0;
+  margin: 0 0 0 5px;
+  border: 0;
+  width: 40px;
+  height: 40px;
+  display: block;
+  text-align: center;
+  line-height: 40px;
+  color: #666;
+  font-size: 14px;
+}
+
+.order .order-foot .page .pa1 li:hover {
+  background-color: #bf1132;
+  color: #fff;
+}
+
+.order .order-foot .page .pa1 .page-l, .order .order-foot .page .pa1 .page-r {
+  position: relative;
+  text-indent: -99999px;
+  width: 40px;
+  height: 40px;
+  background-color: #bf1132;
+}
+
+.order .order-foot .page .pa1 .page-l:before {
+  position: absolute;
+  top: 17px;
+  right: 19px;
+  content: "";
+  width: 0;
+  height: 0;
+  border: solid 4px;
+  border-color: transparent #fff transparent transparent;
+}
+
+.order .order-foot .page .pa1 .page-r:before {
+  position: absolute;
+  top: 17px;
+  right: 14px;
+  content: "";
+  width: 0;
+  height: 0;
+  border: solid 4px;
+  border-color: transparent transparent transparent #fff;
+}
+
+.order .order-foot .page .pa2 {
+  padding-left: 0;
+}
+
+.order .order-foot .page .pa2 input[type='text'] {
+  float: left;
+  margin-top: 0;
+  width: 88px;
+  height: 36px;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+
+.order .order-foot .page .pa2 input[type='button'] {
+  float: left;
+  width: 90px;
+  height: 40px;
+  background-color: #bf1132;
+  border: 0;
+  color: #fff;
+}
+
+.order .order-foot .page .page-click {
+  background-color: #bf1132 !important;
+  color: #fff !important;
+  font-weight: normal !important;
+}
