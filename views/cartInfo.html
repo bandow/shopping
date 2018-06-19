@@ -10,7 +10,7 @@
 	<title></title>
 	<link rel="stylesheet" href="../plugins/swiper/idangerous.swiper.css">
 	<link rel="stylesheet" href="../styles/css/global.css">
-	<link rel="stylesheet" href="../styles/css/cart.css">
+	<link rel="stylesheet" href="../styles/css/cart-info.css">
 </head>
 <body>
 <div class="wrapper">
@@ -212,8 +212,8 @@
 				<h4>我的订单 > </h4>
 				<ul>
 					<li><a href="javascript:;">我的购物车 ></a></li>
-					<li class="on"><a href="cart.html">1 查看购物车 ></a></li>
-					<li><a href="cartInfo.html">2 填写核对订单信息 ></a></li>
+					<li><a href="cart.html">1 查看购物车 ></a></li>
+					<li class="on"><a href="cartInfo.html">2 填写核对订单信息 ></a></li>
 					<li><a href="javascript:;">3 成功提交订单</a></li>
 				</ul>
 			</div>
@@ -223,140 +223,98 @@
 			</div>
 		</div>
 	</div>
-	<div class="container container-cart w1190">
-		<div class="cart">
-			<div class="cart-top">
-				<div class="cart-top-l">
-					<div class="title">
-						<h3>产品大类</h3><p>全部</p>
-					</div>
-					<div class="title">
-						<h3>全部产品小类</h3><p>全部</p>
-					</div>
-					<div class="title">
-						<h3>产品性质</h3><p>全部</p>
+	<div class="container container-cart-info w1190">
+		<div class="cart-info">
+			<div class="cart-info-head">
+				<div class="title">
+					<h3>收货人信息</h3>
+					<div class="title-select">
+						<p>其他收货人</p>
 					</div>
 				</div>
-				<div class="cart-top-r">
-					<div class="search">
-						<label><input type="text" placeholder="产品查询"></label>
-						<div class="search-btn"></div>
+				<div class="info">
+					<p><span>收货人：</span><span>石美乐</span></p>
+					<p><span>收货电话：</span><span>18076567309</span></p>
+					<div class="info-item">
+						<span>汇款户名：</span>
+						<label><input type="text" value="广西南宁城市便捷朝阳酒店服务有限公司 "></label>
+						<div class="info-item-select"><span>选择历史汇款名</span></div>
+						<p>*请填写正确的汇款户名，以免影响发货！</p>
+					</div>
+					<p><span>收货地址：</span><span>广西南宁市朝阳路66号钻石广场7楼</span></p>
+					<p><span>发票抬头：</span><span>广西南宁城市便捷朝阳酒店服务有限公司</span></p>
+					<p><span>票种：</span><span>增值税专用发票</span></p>
+					<p><span>纳税人识别号：</span><span>91450102672467586N</span></p>
+					<p><span>注册地址、电话：</span><span>南宁市朝阳路66号钻石广场七、八层0771-6116800</span></p>
+					<p><span>开户银行及帐号：</span><span>中国农业银行南宁朝阳广场分理处20022801040001039</span></p>
+					<p><span>接收电子发票邮箱：</span><span>305006882@qq.com;cw0771025@dossen.com;</span></p>
+				</div>
+				<div class="edit">
+					<p>编辑地址</p>
+				</div>
+			</div>
+			<div class="cart-info-middle">
+				<div class="title">
+					<h3>送货清单</h3>
+				</div>
+				<div class="middle-content">
+					<ul>
+						<li>商品</li>
+						<li>产品属性</li>
+						<li>单位</li>
+						<li>是否含税</li>
+						<li>单价</li>
+						<li>优惠</li>
+						<li>数量</li>
+						<li>金额</li>
+					</ul>
+					<div class="cart-info-middle-content">
+						<dl>
+							<dd>
+								<div class="img">
+									<img src="../images/cart1.jpg" alt="">
+									<div class="text">
+										<p>精选便捷</p>
+										<p>小户型-北岸-抱枕芯</p>
+									</div>
+								</div>
+							</dd>
+							<dd></dd>
+							<dd><span>个</span></dd>
+							<dd><span>是</span></dd>
+							<dd><span>￥15.00</span></dd>
+							<dd><span>减￥0</span></dd>
+							<dd><span>1</span></dd>
+							<dd><span>￥15.00</span></dd>
+						</dl>
+					</div>
+					<div class="cart-info-middle-bottom">
+						<div class="text">
+							<p>广州精选商贸有限公司</p>
+							<p>1、产品价格含税，单笔订单金额≥1000元含运费；</p>
+							<p>2、产品运输并卸货至酒店物业一楼门口。</p>
+							<p>小计：<em>￥15.00</em></p>
+						</div>
+						<label><input type="text" placeholder="备注"></label>
 					</div>
 				</div>
 			</div>
-			<div class="cart-bottom">
-				<ul>
-					<li></li>
-					<li>商品</li>
-					<li>包装数量</li>
-					<li>起订数量</li>
-					<li>产品属性</li>
-					<li>单位</li>
-					<li>单价</li>
-					<li>优惠</li>
-					<li>数量</li>
-					<li>小计</li>
-					<li>操作</li>
-				</ul>
-				<div class="cart-bottom-middle">
-					<dl>
-						<dd><i></i></dd>
-						<dd>
-							<div class="img">
-								<img src="../images/cart1.jpg" alt="">
-								<div class="text">
-									<p>精选便捷</p>
-									<p>小户型-北岸-抱枕芯</p>
-								</div>
-							</div>
-						</dd>
-						<dd><span>0</span></dd>
-						<dd><span>1</span></dd>
-						<dd></dd>
-						<dd><span>个</span></dd>
-						<dd><span>￥15</span></dd>
-						<dd><span>减￥0</span></dd>
-						<dd>
-							<div class="cart-button">
-								<label><input class="total" type="text" value="1"></label>
-								<div class="add-subtract">
-									<i class="add">+</i>
-									<i class="subtract">-</i>
-								</div>
-							</div>
-						</dd>
-						<dd><span>￥15.00</span></dd>
-						<dd><span><a href="javascript:;">删除</a></span></dd>
-					</dl>
-					<dl>
-						<dd><i></i></dd>
-						<dd>
-							<div class="img">
-								<img src="../images/cart2.jpg" alt="">
-								<div class="text">
-									<p>精选便捷</p>
-									<p>小户型-北岸-抱枕芯</p>
-								</div>
-							</div>
-						</dd>
-						<dd><span>0</span></dd>
-						<dd><span>1</span></dd>
-						<dd></dd>
-						<dd><span>个</span></dd>
-						<dd><span>￥15</span></dd>
-						<dd><span>减￥0</span></dd>
-						<dd>
-							<div class="cart-button">
-								<label><input class="total" type="text" value="1"></label>
-								<div class="add-subtract">
-									<i class="add">+</i>
-									<i class="subtract">-</i>
-								</div>
-							</div>
-						</dd>
-						<dd><span>￥15.00</span></dd>
-						<dd><span><a href="javascript:;">删除</a></span></dd>
-					</dl>
-					<dl>
-						<dd><i></i></dd>
-						<dd>
-							<div class="img">
-								<img src="../images/cart3.jpg" alt="">
-								<div class="text">
-									<p>精选便捷</p>
-									<p>小户型-北岸-抱枕芯</p>
-								</div>
-							</div>
-						</dd>
-						<dd><span>0</span></dd>
-						<dd><span>1</span></dd>
-						<dd></dd>
-						<dd><span>个</span></dd>
-						<dd><span>￥15</span></dd>
-						<dd><span>减￥0</span></dd>
-						<dd>
-							<div class="cart-button">
-								<label><input class="total" type="text" value="1"></label>
-								<div class="add-subtract">
-									<i class="add">+</i>
-									<i class="subtract">-</i>
-								</div>
-							</div>
-						</dd>
-						<dd><span>￥15.00</span></dd>
-						<dd><span><a href="javascript:;">删除</a></span></dd>
-					</dl>
+			<div class="cart-info-foot">
+				<div class="left">
+					<div class="h2"><i></i><p>已阅读以下事项</p></div>
+					<p>1、本下单账号仅供账号使用人自己使用，如非本账号使用人使用，则本人承诺已经获得了账号使用人充分的授权</p>
+					<p>2、本告知书提交后，相对应的订单也将一并提交，订单提交后，则视为本人已发出一个有效的订单承诺，在供应商确认后，则视为《订单合同》生效。本人已经知悉并理解《订单合同》及告知书的全部内容，并同意接受其约束。</p>
+					<p>3、本人确认，广州固优商贸有限公司已就限制本人权利或广州固优商贸有限公司单方拥有某些权利的所有条款向本人作出相应提示和说明，本人对所有条款完全理解并自愿接受该内容。</p>
 				</div>
-				<div class="cart-bottom-foot">
-					<p>删除选中的商品<span>将选中的商品移到我的收藏</span></p>
-					<a href="">去结算</a>
-					<div class="text">
-						<p><span>选择<em class="num">11</em>件商品</span>已节省： - ¥0.00</p>
-						<p>总价：<em>￥205.00</em></p>
+				<div class="right">
+					<a href="">确认无误, 提交订单</a>
+					<div class="price">
+						<p>金额总计： </p>
+						<h4>￥205.00</h4>
 					</div>
 				</div>
 			</div>
-		</div>
+		</div>	
 	</div>
 	<div class="footer">
 		<div class="w1190 footer-content">
@@ -441,69 +399,10 @@
 			$(this).removeClass("on");
 	   		$(this).find(".cate_part").hide();
 		});
-		//cart 加减
-		$(".add").click(function(){
-			var total=$(this).parent().parent().find(".total").val();
-			total++;
-			$(this).parent().parent().find(".total").val(total);
-
-			sum=nemberPrice();
-			$(".cart .cart-bottom .num").text(sum);
-		});
-		$(".subtract").bind("click",function(){
-			var total=$(this).parent().parent().find(".total").val();
-			if(total > 1){
-				total--;
-				$(this).parent().parent().find(".total").val(total);
-			}else{
-				$(this).parent().parent().find(".total").val(1);
-			}
-
-			sum=nemberPrice();
-			$(".cart .cart-bottom .num").text(sum);
+		//cart-info
+		$(".cart-info .cart-info-foot .left .h2 i").click(function(){
+			$(this).toggleClass("on");
 		})
-		// cart 选择
-		var sum=0;
-		$(".cart .cart-bottom .num").text(sum);
-		$(".cart-bottom ul li:first-child").click(function(){	
-			if(!$(this).hasClass("on")){
-				$(this).addClass("on");
-				$(this).parent().next().find("dd:first-child").addClass("active").parent().addClass("activebig");	
-			}else{
-				$(this).removeClass("on");
-				$(this).parent().next().find("dd:first-child").removeClass("active").parent().removeClass("activebig"); 
-			}
-			sum=nemberPrice();
-			$(".cart .cart-bottom .num").text(sum);
-		});
-		$(".cart-bottom-middle dl dd:first-child").click(function(){
-			if(!$(this).hasClass("active")){
-				$(this).addClass("active");
-				$(this).addClass("active").parent().addClass("activebig");
-				if($("[class='active']").length == $(this).parent().parent().find("dl").length){
-					$(this).parent().parent().parent().find("li:first-child").addClass("on");
-				}
-			}else{
-				$(this).removeClass("active");
-				$(this).removeClass("active").parent().removeClass("activebig");
-				if($("[class='active']").length != $(this).parent().parent().find("dl").length){
-					$(this).parent().parent().parent().find("li:first-child").removeClass("on");
-				}
-			}
-			sum=nemberPrice();
-			$(".cart .cart-bottom .num").text(sum);	
-		});
-		$(".cart-bottom-middle dl dd:last-child span a").click(function(){
-			$(this).parent().parent().parent().remove();
-			sum=nemberPrice();
-			$(".cart .cart-bottom .num").text(sum);	
-		});
-		
-
-		
-		 
-		
-
 		//我的订单 
 		$(".list-r-tilte-l li").bind("click",function(){
 			$(this).addClass("on").siblings().removeClass("on");
@@ -515,15 +414,6 @@
 			Alert:function(){confirm("注意您，没有绑定对应的点击事件，此条为自定义弹窗")}//套的时候去掉
 		},true);
 	});
-
-
-	function nemberPrice(){
-		var sum=0;
-		$(".cart .cart-bottom dl.activebig").each(function(index, element){
-			sum +=parseInt($(this).find(".total").val());		
-		});				
-		return sum;
-	}
 </script>
 <!-- 以下是针对ie9以下才执行的js代码 注意不要删掉哦！！！ -->
 <!--[if lt IE 9 ]>    
