@@ -114,8 +114,22 @@
 				font:14px/1.8 $font-style-base;
 				color:#666;	
 			}
+			p.size{
+				em{
+					margin-left:10px; 
+					display:inline-block;
+					width:50px;
+					border:1px solid #ddd;
+					text-align:center;
+					cursor:pointer;
+				}
+				em.on{
+					border:1px solid #c31032;
+					color:#c31032;
+				}
+			}
 			.detail-card{
-				margin-top:62px;
+				margin-top:34px;
 				.detail-card-l{
 					float:left;
 					label{

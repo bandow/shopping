@@ -9,8 +9,68 @@
     <meta name="robots" content="index,follow"/>
 	<title></title>
 	<link rel="stylesheet" href="../plugins/swiper/idangerous.swiper.css">
+	<link rel="stylesheet" href="../plugins/picker/daterangepicker.min.css">
 	<link rel="stylesheet" href="../styles/css/global.css">
 	<link rel="stylesheet" href="../styles/css/order.css">
+	<style>
+		.date-picker-wrapper{
+			padding:0;
+			background-color:
+			transparent;border:0;
+			-webkit-box-shadow: 0px 3px 5px rgba(0,0,0,.2);
+			box-shadow:0px 3px 5px rgba(0,0,0,.2);
+			font-family:"Microsoft YaHei", Helvetica, Tahoma, Arial, STXihei, STHeiti, Heiti, SimSun, sans-serif;
+		}
+		.date-picker-wrapper.no-shortcuts{padding-bottom:0;padding-top:10px;border: 1px solid #ccc;background: #fff;}
+		.date-picker-wrapper .month-wrapper{border:0;padding:20px;}
+		.date-picker-wrapper .footer{border:0;border: 0;padding: 0;background: none;}
+		.date-picker-wrapper .month-wrapper table{width:280px;}
+		.date-picker-wrapper .month-wrapper table.month2{width:280px;}
+		.date-picker-wrapper .month-wrapper table .day.toMonth.valid{color:#1e1e1e;font-weight:normal;border-radius:3px;}
+		.date-picker-wrapper .month-wrapper table .day.toMonth.valid.real-today{background:transparent;color:#c62153;}
+		.date-picker-wrapper .month-wrapper table .day{color:#c0c0c0;font-weight:normal;}
+		.date-picker-wrapper .first-date-selected{background-color:#c62153 !important;}
+		.date-picker-wrapper .last-date-selected{background-color:#c62153 !important;}
+		.date-picker-wrapper .month-wrapper table .day.checked{background-color:#e46188;color:#fff;}
+		.date-picker-wrapper .month-wrapper table .day.toMonth.valid.checked{color:#fff;}
+		.date-picker-wrapper .month-wrapper table td, .date-picker-wrapper .month-wrapper table th{font-weight:bold;color:#333;width:50px;padding:3px 2px;}
+		.date-picker-wrapper .month-wrapper table .day.toMonth.hovering{background-color:#e46188;color:#fff;}
+		.date-picker-wrapper table .caption .next, .date-picker-wrapper table .caption .prev{position:relative;}
+		.date-picker-wrapper table .caption .prev:after{
+		    content: '';
+		    position: absolute;
+		    top:50%;
+		    left:3px;
+		    width:10px;
+		    height:10px;
+		    border:1px solid;
+		    border-bottom: 0;
+		    border-right: 0;
+		    margin-top: -5px;
+		    color: #c62153;
+		    -webkit-transform: rotateZ(-45deg);
+		    transform: rotateZ(-45deg)
+		}
+		.date-picker-wrapper table .caption .next:after{
+		    content: '';
+		    position: absolute;
+		    top:50%;
+		    left:3px;
+		    width:10px;
+		    height:10px;
+		    border:1px solid;
+		    border-bottom: 0;
+		    border-right: 0;
+		    margin-top: -5px;
+		    color: #c62153;
+		    -webkit-transform: rotateZ(135deg);
+		    transform: rotateZ(135deg)
+		}
+		.date-picker-wrapper table .caption .next:hover,.date-picker-wrapper table .caption .prev:hover {
+		    background-color: #fff;
+		    color: #fff
+		}
+	</style>
 </head>
 <body>
 	<div class="wrapper">
@@ -229,15 +289,34 @@
 			<div class="order">
 				<div class="order-top">
 					<ul>
-						<li><h6>订单号</h6><span>SQ201806000657</span></li>
-						<li><h6>产品大类</h6><span></span></li>
-						<li><h6>订单日期</h6><span>2018.05.05 ~ 2018.06.05</span></li>
-						<li><h6>供应商</h6><span></span></li>
-						<li><h6>产品名称</h6><span></span></li>
-						<li><h6>收货日期</h6><span>2018.05.05 ~ 2018.06.05</span></li>
+						<li><h6>订单号</h6><span><input type="text" value="SQ201806000657"></span></li>
+						<li>
+							<h6>产品大类</h6><span></span>
+							<div class="hide-div">
+								<dl>
+									<dd>11111111</dd>
+									<dd>11111112</dd>
+									<dd>11111113</dd>
+								</dl>
+							</div>
+						</li>
+						<li><h6>订单日期</h6><span class="date1"><input class="date-start1" type="text"> ~ <input class="date-end1" type="text"></span></li>
+						<li><h6>供应商</h6><span><input type="text" value=""></span></li>
+						<li><h6>产品名称</h6><span><input type="text" value=""></span></li>
+						<li><h6>收货日期</h6><span class="date2"><input class="date-start2" type="text"> ~ <input class="date-end2" type="text"></span></li>
 					</ul>
 					<div class="order-top-r">
-						<div class="t"><h5>订单状态</h5><h6>全部订单</h6></div>
+						<div class="t">
+							<h5>订单状态</h5>
+							<h6>全部订单</h6>
+							<div class="t-hide-div">
+								<dl>
+									<dd>物流公司</dd>
+									<dd>物流电话</dd>
+									<dd>物流单号</dd>
+								</dl>
+							</div>
+						</div>
 						<div class="b">
 							<a href="">导出</a>
 							<a href="">查询</a>
@@ -449,6 +528,8 @@
 	<script src="../plugins/jquery/jquery.nicescroll.min.js"></script>
 	<script src="../plugins/swiper/idangerous.swiper.min.js"></script>
 	<script src="../plugins/jqueryPage/pages.js"></script>
+	<script src="../plugins/moment.js"></script>
+	<script src="../plugins/picker/jquery.daterangepicker.js"></script>
 	<script>
 		$(function(){
 			//滚动条
@@ -488,30 +569,139 @@
 				$(this).removeClass("on");
 		   		$(this).find(".cate_part").hide();
 			});
-			//detail 加减
-			var sub=$(".total").val();
-			$(".add").bind("click",function(){
-				sub++;
-				$(".total").val(sub);
-			})
-			$(".subtract").bind("click",function(){
-				if(sub > 1){
-					sub--;
-					$(".total").val(sub);
-				}else{
-					$(".total").val(1);
-				}
-			})
-			//我的订单 
+			//我的订单   order   order  ------------------
 			$(".list-r-tilte-l li").bind("click",function(){
 				$(this).addClass("on").siblings().removeClass("on");
 			});
 			$(".order-middle-items:even").css('backgroundColor','#f8f8f8')
+			//order  产品大类
+			$(".order .order-top ul li").bind("click",function(){
+				$(this).find(".hide-div").show();
+			});
+			$(".hide-div dd").bind("click",function(e){
+				e.stopPropagation();
+				$(this).parent().parent().parent().find("span").text($(this).text());
+				$(".hide-div").hide();
+			});
+			//order  全部订单
+			$(".order .order-top .order-top-r .t").bind("click",function(){
+				$(this).find(".t-hide-div").show();
+			});
+			$(".t-hide-div dd").bind("click",function(e){
+				e.stopPropagation();
+				$(this).parent().parent().parent().find("h6").text($(this).text());
+				$(".t-hide-div").hide();
+			});
+			
+
 			//分页
 			$(".page").Page({
 				Pages:200,
 				Alert:function(){confirm("注意您，没有绑定对应的点击事件，此条为自定义弹窗")}//套的时候去掉
 			},true);
+		});
+	</script>
+	<script>
+		//日历
+		var myDate = new Date();
+		var y=myDate.getFullYear();
+	    var m=myDate.getMonth()+1;
+	    var day=myDate.getDate();
+	    var hDay=myDate.getDate()+1;
+	    
+	    //初始化当天时间
+	    $(".date-start1").val(y+"."+m+"."+day);
+	    $(".date-end1").val(y+"."+m+"."+hDay);
+
+	    $(".date-start2").val(y+"."+m+"."+day);
+	    $(".date-end2").val(y+"."+m+"."+hDay);
+
+
+		var date1=$('.date1'),
+		date2=$('.date2'),
+
+		dateStart1=date1.find(".date-start1"),
+		dateEnd1=date1.find(".date-end1"),
+
+		dateStart2=date2.find(".date-start2"),
+		dateEnd2=date2.find(".date-end2");
+
+		date1.dateRangePicker({
+			autoClose: true,
+			format: 'YYYY.MM.DD',
+			separator: ' to ',
+			language: 'cn',
+			startOfWeek: 'sunday',
+			startDate: new Date(),  //默认今天开始
+	        getValue: function()
+			{
+				if (dateStart1.val() && dateEnd1.val() )
+					return dateStart1.val() + ' to ' +dateEnd1.val();
+				else
+					return '';
+			},
+			setValue: function(s,s1,s2)
+			{
+				dateStart1.val(s1);
+				dateEnd1.val(s2);
+			},
+			howDateFilter: function(time, date)   //今天显示
+	        {   
+	         var html='<div style="padding:0 5px;">';
+	             html+='<span style="font-size:12px;">'+date+'</span>';
+	             html+='<div style="opacity:1;"></div>';
+	             html+='</div>';
+	          return html;
+	        },
+	        showShortcuts:false,   //去掉快捷html
+	        inline:false,
+	        singleMonth:false,  //true显示1个月，false为2个月
+	        batchMode:true,
+	        stickyMonths:true, //如果是true，只会有一个以前和一个下一个按钮。点击他们将改变两个月。
+	        // extraClass:'dengcb',  //添加class
+	        showTopbar:true,     //true显示确定按钮 false不显示确定按钮选择好就确定
+	        selectForward:false,   //true选择开始的时间前面就不能选，默认false
+	        selectBackward:false,  //true只能选择1天 
+			showTopbar: false      //去掉头部显示日期
+		});
+
+		date2.dateRangePicker({
+			autoClose: true,
+			format: 'YYYY.MM.DD',
+			separator: ' to ',
+			language: 'cn',
+			startOfWeek: 'sunday',
+			startDate: new Date(),  //默认今天开始
+	        getValue: function()
+			{
+				if (dateStart2.val() && dateEnd2.val() )
+					return dateStart2.val() + ' to ' +dateEnd2.val();
+				else
+					return '';
+			},
+			setValue: function(s,s1,s2)
+			{
+				dateStart2.val(s1);
+				dateEnd2.val(s2);
+			},
+			howDateFilter: function(time, date)   //今天显示
+	        {   
+	         var html='<div style="padding:0 5px;">';
+	             html+='<span style="font-size:12px;">'+date+'</span>';
+	             html+='<div style="opacity:1;"></div>';
+	             html+='</div>';
+	          return html;
+	        },
+	        showShortcuts:false,   //去掉快捷html
+	        inline:false,
+	        singleMonth:false,  //true显示1个月，false为2个月
+	        batchMode:true,
+	        stickyMonths:true, //如果是true，只会有一个以前和一个下一个按钮。点击他们将改变两个月。
+	        // extraClass:'dengcb',  //添加class
+	        showTopbar:true,     //true显示确定按钮 false不显示确定按钮选择好就确定
+	        selectForward:false,   //true选择开始的时间前面就不能选，默认false
+	        selectBackward:false,  //true只能选择1天 
+			showTopbar: false      //去掉头部显示日期
 		});
 	</script>
 	<!-- 以下是针对ie9以下才执行的js代码 注意不要删掉哦！！！ -->

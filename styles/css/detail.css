@@ -156,8 +156,22 @@
   color: #666;
 }
 
+.detail-l .detail-l-t .detail-l-t-r p.size em {
+  margin-left: 10px;
+  display: inline-block;
+  width: 50px;
+  border: 1px solid #ddd;
+  text-align: center;
+  cursor: pointer;
+}
+
+.detail-l .detail-l-t .detail-l-t-r p.size em.on {
+  border: 1px solid #c31032;
+  color: #c31032;
+}
+
 .detail-l .detail-l-t .detail-l-t-r .detail-card {
-  margin-top: 62px;
+  margin-top: 34px;
 }
 
 .detail-l .detail-l-t .detail-l-t-r .detail-card .detail-card-l {

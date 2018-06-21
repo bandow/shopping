@@ -56,21 +56,50 @@
   left: 190px;
   bottom: 0;
   z-index: 3;
-  padding: 10px;
   display: none;
   background-color: #fff;
-  width: 320px;
+  width: 150px;
+  border-right: 1px solid #ccc;
 }
 
 .nav-slide .nav-l .nav-l-out dl .cate_part ul li {
-  float: left;
-  margin-left: 20px;
+  padding: 5px 10px;
+  /*float:left;*/
+  /*margin-left:20px;*/
   font: 14px/2.4 "Microsoft Yahei", Tahoma, Simsun, sans-serif, -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti;
   color: #666;
   cursor: pointer;
+  background: url(../../images/nav_li1.png) 120px center no-repeat;
 }
 
 .nav-slide .nav-l .nav-l-out dl .cate_part ul li:hover {
+  color: #fff;
+  background: url(../../images/nav_li2.png) #bf1132 120px center no-repeat;
+}
+
+.nav-slide .nav-l .nav-l-out dl .cate_part ul li .cate_part_three {
+  position: absolute;
+  top: 0;
+  left: 150px;
+  bottom: 0;
+  z-index: 3;
+  display: none;
+  background-color: #fff;
+  background: -webkit-gradient(linear, left top, right top, color-stop(50%, #fff), to(rgba(255, 255, 255, 0)));
+  background: -webkit-linear-gradient(left, #fff 50%, rgba(255, 255, 255, 0) 100%);
+  background: -o-linear-gradient(left, #fff 50%, rgba(255, 255, 255, 0) 100%);
+  background: linear-gradient(left, #fff 50%, rgba(255, 255, 255, 0) 100%);
+  width: 400px;
+}
+
+.nav-slide .nav-l .nav-l-out dl .cate_part ul li .cate_part_three a {
+  font: 14px/2.4 "Microsoft Yahei", Tahoma, Simsun, sans-serif, -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti;
+  color: #666;
+  display: inline-block;
+  margin-left: 20px;
+}
+
+.nav-slide .nav-l .nav-l-out dl .cate_part ul li .cate_part_three a:hover {
   color: #bf1132;
 }
 
@@ -233,6 +262,18 @@
   margin-bottom: 10px;
   font: bold 16px/1.5 "Microsoft Yahei", Tahoma, Simsun, sans-serif, -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti;
   color: #333;
+}
+
+.news .news-l .items h3 a {
+  float: right;
+  font-size: 12px;
+  font-weight: normal;
+  color: #666;
+}
+
+.news .news-l .items h3 a:hover {
+  color: #c01132;
+  text-decoration: underline;
 }
 
 .news .news-l .items ul {

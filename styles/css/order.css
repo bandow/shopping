@@ -24,7 +24,8 @@
 .order .order-top {
   padding: 15px;
   border-bottom: 1px solid #ccc;
-  overflow: hidden;
+  /*overflow:hidden;*/
+  height: 116px;
 }
 
 .order .order-top ul {
@@ -51,6 +52,21 @@
   display: inline-block;
   font-size: 14px;
   color: #999;
+  width: 222px;
+}
+
+.order .order-top ul li .date1, .order .order-top ul li .date2 {
+  line-height: 41px;
+}
+
+.order .order-top ul li input {
+  background: none;
+  border: none;
+  outline: none;
+  width: 100%;
+  height: 100%;
+  color: #999;
+  font-size: 14px;
 }
 
 .order .order-top ul li:first-child {
@@ -59,14 +75,42 @@
 }
 
 .order .order-top ul li:first-child + li {
+  position: relative;
   border-bottom: 0;
   border-right: 0;
   background: url(../../images/order_icon1.png) 290px center no-repeat;
+  cursor: pointer;
+}
+
+.order .order-top ul li:first-child + li .hide-div {
+  position: absolute;
+  top: 41px;
+  left: -1px;
+  z-index: 1;
+  display: none;
+  width: 321px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+}
+
+.order .order-top ul li:first-child + li .hide-div dl dd {
+  padding: 10px;
+  font-size: 14px;
+}
+
+.order .order-top ul li:first-child + li .hide-div dl dd:hover {
+  background-color: #c01132;
+  color: #fff;
 }
 
 .order .order-top ul li:first-child + li + li {
+  padding: 0 10px;
   border-bottom: 0;
   background: url(../../images/order_icon2.png) 290px center no-repeat;
+}
+
+.order .order-top ul li:first-child + li + li input {
+  width: 70px;
 }
 
 .order .order-top ul li:first-child + li + li + li {
@@ -74,7 +118,7 @@
 }
 
 .order .order-top ul li:first-child + li + li + li h6 {
-  border-right: 1px solid #ccc;
+  /*border-right:1px solid #ccc;*/
 }
 
 .order .order-top ul li:first-child + li + li + li + li {
@@ -83,7 +127,12 @@
 }
 
 .order .order-top ul li:first-child + li + li + li + li + li {
+  padding: 0 10px;
   background: url(../../images/order_icon2.png) 290px center no-repeat;
+}
+
+.order .order-top ul li:first-child + li + li + li + li + li input {
+  width: 70px;
 }
 
 .order .order-top .order-top-r {
@@ -92,8 +141,14 @@
   border: 1px solid #ccc;
 }
 
+.order .order-top .order-top-r > .t {
+  position: relative;
+  height: 42px;
+  cursor: pointer;
+}
+
 .order .order-top .order-top-r > .t h5 {
-  display: inline-block;
+  float: left;
   padding: 0 10px;
   width: 86px;
   font-size: 14px;
@@ -104,7 +159,7 @@
 
 .order .order-top .order-top-r > .t h6 {
   position: relative;
-  display: inline-block;
+  float: left;
   padding: 0 10px;
   width: 86px;
   font-size: 14px;
@@ -121,6 +176,27 @@
   height: 0;
   border: solid 4px;
   border-color: #bf1132 transparent transparent transparent;
+}
+
+.order .order-top .order-top-r > .t .t-hide-div {
+  position: absolute;
+  left: -1px;
+  top: 41px;
+  z-index: 1;
+  display: none;
+  width: 174px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+}
+
+.order .order-top .order-top-r > .t .t-hide-div > dl > dd {
+  padding: 10px;
+  font-size: 14px;
+}
+
+.order .order-top .order-top-r > .t .t-hide-div > dl > dd:hover {
+  background-color: #c01132;
+  color: #fff;
 }
 
 .order .order-top .order-top-r > .b {

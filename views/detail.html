@@ -314,6 +314,7 @@
 						<p>供应商：广州豆芽云科技</p>
 						<p>其他重要信息：</p>
 						<p>最小订货量1; 装箱数量1(订货数量必须为装箱数量的倍数);</p>
+						<p class="size">尺码：<em>M</em><em>S</em><em>L</em></p>
 						<div class="detail-card">
 							<div class="detail-card-l">
 								<label><input class="total" type="text" value="1"></label>
@@ -500,7 +501,10 @@
 				}else{
 					$(".total").val(1);
 				}
-			})
+			});
+			$(".detail-l .detail-l-t .detail-l-t-r > .size em").bind("click",function(){
+				$(this).addClass("on").siblings().removeClass("on");
+			});
 			//运营耗品 
 			$(".list-r-tilte-l li").bind("click",function(){
 				$(this).addClass("on").siblings().removeClass("on");
