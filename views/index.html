@@ -555,24 +555,9 @@
 	<script src="../plugins/jquery/jquery.min.js"></script>
 	<script src="../plugins/jquery/jquery.nicescroll.min.js"></script>
 	<script src="../plugins/swiper/idangerous.swiper.min.js"></script>
+	<script src="../scripts/common.js"></script>
 	<script>
 		$(function(){
-			//滚动条
-			$("#boxscroll").niceScroll({cursorborder:"",cursorcolor:"#ddd"});
-			//购物车移入移出
-			$(".shopping-carts,.login").hover(function(){
-			    $(this).addClass("on");
-				$(this).append('<div class="line"></div>');
-				$(this).find("a").next().show();
-			},function(){
-			    $(this).removeClass("on");
-				$(".line").remove();
-				$(this).find("a").next().hide();
-			});
-			//删除
-			$(".cart .del").bind("click",function(){
-				$(this).parent().remove();
-			})
 			//导航
 			$(".nav-l-out dl").hover(function(){
 				$(this).addClass("on");

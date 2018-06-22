@@ -477,16 +477,17 @@ body {
   left: 0;
   z-index: 21;
   display: none;
-  background: #000;
-  background: rgba(0, 0, 0, 0.8);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#c8000000,endColorstr=#c8000000);
+  /*background:#000;*/
+  width: 660px;
 }
 
 .nev .title-list .title-list-content dl {
   padding: 5px 10px;
   display: block;
   cursor: pointer;
-  width: 510px;
+  width: 190px;
+  background: rgba(0, 0, 0, 0.8);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#c8000000,endColorstr=#c8000000);
 }
 
 .nev .title-list .title-list-content dl dt {
@@ -506,21 +507,48 @@ body {
   left: 190px;
   bottom: 0;
   z-index: 22;
-  padding: 10px;
+  /*padding:10px;*/
   display: none;
   background-color: #fff;
-  width: 320px;
+  width: 150px;
+  border-right: 1px solid #ccc;
 }
 
 .nev .title-list .title-list-content dl .cate_part ul li {
-  float: left;
-  margin-left: 20px;
+  padding: 5px 10px;
+  /*float:left;*/
+  /*margin-left:20px;*/
   font: 14px/2.4 "Microsoft Yahei", Tahoma, Simsun, sans-serif, -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti;
   color: #666;
   cursor: pointer;
+  background: url(../../images/nav_li1.png) 120px center no-repeat;
 }
 
 .nev .title-list .title-list-content dl .cate_part ul li:hover {
+  color: #fff;
+  background: url(../../images/nav_li2.png) #bf1132 120px center no-repeat;
+}
+
+.nev .title-list .title-list-content dl .cate_part ul li .cate_part_three {
+  position: absolute;
+  top: 0;
+  left: 150px;
+  bottom: 0;
+  z-index: 3;
+  display: none;
+  background-color: #fff;
+  /*background:linear-gradient(left, #fff 50%, rgba(255,255,255,0) 100%); */
+  width: 400px;
+}
+
+.nev .title-list .title-list-content dl .cate_part ul li .cate_part_three a {
+  font: 14px/2.4 "Microsoft Yahei", Tahoma, Simsun, sans-serif, -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti;
+  color: #666;
+  display: inline-block;
+  margin-left: 20px;
+}
+
+.nev .title-list .title-list-content dl .cate_part ul li .cate_part_three a:hover {
   color: #bf1132;
 }
 
